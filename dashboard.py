@@ -34,6 +34,51 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+# ─── LOGIN ───────────────────────────────────────────────────────────────────
+USERS = {
+    "admin":    "ricescan2026",
+    "kelompok2": "polindra2026",
+    "dosen":    "verawati2026",
+}
+
+def check_login(username, password):
+    return USERS.get(username.lower()) == password
+
+def show_login():
+    col1, col2, col3 = st.columns([1, 1.2, 1])
+    with col2:
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.markdown("""
+        <div style='text-align:center;margin-bottom:24px'>
+            <div style='font-size:28px;font-weight:700;color:#58a6ff'>RiceScan Dashboard</div>
+            <div style='font-size:13px;color:#8b949e;margin-top:4px'>Monitoring Penyakit Daun Padi — Kabupaten Indramayu</div>
+        </div>
+        """, unsafe_allow_html=True)
+        with st.form("login_form"):
+            st.markdown("#### Masuk ke Dashboard")
+            username = st.text_input("Username", placeholder="contoh: admin")
+            password = st.text_input("Password", type="password", placeholder="masukkan password")
+            submitted = st.form_submit_button("Masuk", use_container_width=True, type="primary")
+            if submitted:
+                if check_login(username, password):
+                    st.session_state["logged_in"] = True
+                    st.session_state["username"] = username.lower()
+                    st.rerun()
+                else:
+                    st.error("Username atau password salah.")
+        st.markdown("""
+        <div style='text-align:center;margin-top:16px;font-size:11px;color:#8b949e'>
+        Kelompok 2 · D4 SIKC POLINDRA · 2026
+        </div>""", unsafe_allow_html=True)
+
+if "logged_in" not in st.session_state:
+    st.session_state["logged_in"] = False
+
+if not st.session_state["logged_in"]:
+    show_login()
+    st.stop()
+
+
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap');
@@ -338,7 +383,7 @@ with st.sidebar:
     menu=st.radio("",
         ["Overview","Cuaca Real-Time","Survei Petani",
          "Prediksi Risiko",
-         "Model CNN","EDA Report","Deteksi Citra","Status Pipeline"],
+         "Model CNN","EDA Report","Deteksi Citra","Status Pipeline","Tentang Sistem"],
         label_visibility="collapsed")
     st.divider()
     if pipeline_ok():
@@ -360,6 +405,14 @@ with st.sidebar:
     </div>""",unsafe_allow_html=True)
     if st.button("Refresh Data",use_container_width=True):
         st.cache_data.clear(); st.rerun()
+    # Logout
+    st.markdown("---")
+    user = st.session_state.get("username","")
+    st.caption(f"Login sebagai: **{user}**")
+    if st.button("Keluar", use_container_width=True):
+        st.session_state["logged_in"] = False
+        st.rerun()
+
 
 
 # ════════════════════════════════ PAGE 1: OVERVIEW ═══════════════════════════
@@ -1262,3 +1315,144 @@ elif menu=="Status Pipeline":
         st.divider()
         st.markdown("**Optimasi Pipeline (optimization_comparison.csv)**")
         st.dataframe(df_opt,use_container_width=True,hide_index=True)
+
+# ══════════════════════════════ PAGE: TENTANG SISTEM ═════════════════════════
+elif menu=="Tentang Sistem":
+    st.markdown("## Tentang Sistem")
+    st.caption("Informasi lengkap mengenai RiceScan Dashboard dan tim pengembang")
+
+    # ── Hero ──────────────────────────────────────────────────────────────────
+    st.markdown("""
+    <div class='dash-card' style='text-align:center;padding:36px 20px;border-left:4px solid #58a6ff'>
+        <div style='font-size:32px;font-weight:700;color:#58a6ff;margin-bottom:6px'>RiceScan Dashboard</div>
+        <div style='font-size:15px;color:#8b949e'>Sistem Monitoring Penyakit Daun Padi Berbasis Big Data & CNN</div>
+        <div style='font-size:13px;color:#8b949e;margin-top:8px'>Kabupaten Indramayu, Jawa Barat · April 2026</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # ── Latar Belakang ────────────────────────────────────────────────────────
+    st.markdown("### Latar Belakang")
+    st.markdown("""
+    <div class='dash-card'>
+        <p style='color:#c9d1d9;line-height:1.8;margin:0'>
+        Kabupaten Indramayu adalah penghasil padi terbesar di Jawa Barat. Setiap tahun, petani menghadapi
+        ancaman serius dari penyakit daun padi yang dapat merusak hingga 70% hasil panen jika tidak
+        terdeteksi sejak dini. Selama ini deteksi dilakukan secara manual oleh petugas PPL — prosesnya
+        lambat dan sering terlambat ditangani.<br><br>
+        <b style='color:#58a6ff'>RiceScan Dashboard</b> hadir sebagai solusi berbasis data yang
+        mengintegrasikan tiga sumber informasi sekaligus: data cuaca real-time, survei lapangan petani,
+        dan deteksi citra CNN — dalam satu platform monitoring terpadu yang dapat diakses secara online.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── Penyakit yang Dideteksi ───────────────────────────────────────────────
+    st.markdown("### Penyakit yang Dideteksi")
+    col1, col2, col3, col4 = st.columns(4)
+    penyakit = [
+        ("Sehat", "#3fb950", "Tidak ada infeksi. Daun berwarna hijau segar dan merata."),
+        ("Blas Daun", "#f0883e", "Disebabkan jamur Magnaporthe oryzae. Bercak berbentuk belah ketupat dengan tepi coklat. Dipicu kelembaban >80% dan suhu 24–28°C."),
+        ("Hawar Daun (Blight)", "#d29922", "Disebabkan bakteri Xanthomonas oryzae. Daun mengering dari ujung, warna kuning kecoklatan. Berkembang saat curah hujan tinggi."),
+        ("Tungro", "#f85149", "Virus yang dibawa wereng hijau. Daun menguning-kemerahan. Tidak ada obat — tanaman harus dicabut dan dibakar segera."),
+    ]
+    for col, (nama, warna, desc) in zip([col1,col2,col3,col4], penyakit):
+        with col:
+            st.markdown(f"""
+            <div class='dash-card' style='border-top:3px solid {warna};text-align:center'>
+                <div style='font-size:14px;font-weight:700;color:{warna};margin-bottom:8px'>{nama}</div>
+                <div style='font-size:11px;color:#8b949e;line-height:1.7'>{desc}</div>
+            </div>""", unsafe_allow_html=True)
+
+    # ── Arsitektur Sistem ─────────────────────────────────────────────────────
+    st.markdown("### Arsitektur Sistem")
+    col_a, col_b = st.columns(2)
+    with col_a:
+        st.markdown("""
+        <div class='dash-card'>
+            <div style='font-size:13px;font-weight:700;color:#58a6ff;margin-bottom:12px'>Pipeline ETL — etl_pipeline.py</div>
+            <div class='mono' style='line-height:2.2;color:#c9d1d9'>
+            EXTRACT &nbsp;&nbsp;&nbsp;→ Baca citra, survei, API cuaca<br>
+            EDA_BEFORE → Statistik data mentah<br>
+            TRANSFORM → Cleaning, normalisasi, augmentasi<br>
+            EDA_AFTER &nbsp;→ Statistik data bersih<br>
+            LOAD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Split train/val/test CNN<br>
+            CNN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ Training model klasifikasi<br>
+            EVALUATE &nbsp;&nbsp;→ Confusion matrix, F1, MAE, MSE<br>
+            OPTIMIZE &nbsp;&nbsp;→ Benchmark konfigurasi
+            </div>
+        </div>""", unsafe_allow_html=True)
+    with col_b:
+        st.markdown("""
+        <div class='dash-card'>
+            <div style='font-size:13px;font-weight:700;color:#58a6ff;margin-bottom:12px'>Sumber Data</div>
+            <div class='mono' style='line-height:2.2;color:#c9d1d9'>
+            Citra CNN &nbsp;&nbsp;&nbsp;&nbsp;→ 4 kelas × 80 gambar<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(sehat / blast / blight / tungro)<br>
+            Survei Petani → 150 responden, 15 kecamatan<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;April 2026<br>
+            API Cuaca &nbsp;&nbsp;&nbsp;&nbsp;→ Open-Meteo (gratis, real-time)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 stasiun GPS Indramayu<br>
+            Preprocessing → Resize 224×224, Otsu, /255
+            </div>
+        </div>""", unsafe_allow_html=True)
+
+    # ── Teknologi ─────────────────────────────────────────────────────────────
+    st.markdown("### Teknologi yang Digunakan")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("""
+        <div class='dash-card'>
+            <div style='font-size:13px;font-weight:700;color:#58a6ff;margin-bottom:10px'>Framework & Library</div>
+            <div class='mono' style='line-height:2;color:#c9d1d9'>
+            Python 3.10+<br>Streamlit 1.35<br>Pandas / NumPy<br>Plotly 5.18<br>TensorFlow / Keras
+            </div>
+        </div>""", unsafe_allow_html=True)
+    with col2:
+        st.markdown("""
+        <div class='dash-card'>
+            <div style='font-size:13px;font-weight:700;color:#58a6ff;margin-bottom:10px'>Data & API</div>
+            <div class='mono' style='line-height:2;color:#c9d1d9'>
+            Open-Meteo API<br>CSV Pipeline Output<br>farmer_survey_raw.csv<br>rice_disease_metadata.csv<br>confusion_matrix.csv
+            </div>
+        </div>""", unsafe_allow_html=True)
+    with col3:
+        st.markdown("""
+        <div class='dash-card'>
+            <div style='font-size:13px;font-weight:700;color:#58a6ff;margin-bottom:10px'>Deploy & Infrastruktur</div>
+            <div class='mono' style='line-height:2;color:#c9d1d9'>
+            GitHub (source control)<br>Streamlit Community Cloud<br>URL: ricescan-kelompok2<br>.streamlit/config.toml<br>requirements.txt
+            </div>
+        </div>""", unsafe_allow_html=True)
+
+    # ── Tim Pengembang ────────────────────────────────────────────────────────
+    st.markdown("### Tim Pengembang")
+    col1, col2, col3 = st.columns(3)
+    tim = [
+        ("Bahtiar Rifai", "2307006", "ETL Pipeline · Backend · Deploy"),
+        ("Darmawan Almadani", "2307008", "CNN Model · Data Processing"),
+        ("Fany Revalina Putri", "2307012", "Dashboard UI · Visualisasi · Survei"),
+    ]
+    for col, (nama, nim, peran) in zip([col1,col2,col3], tim):
+        with col:
+            st.markdown(f"""
+            <div class='dash-card' style='text-align:center;border-top:3px solid #58a6ff'>
+                <div style='font-size:14px;font-weight:700;color:#c9d1d9;margin-bottom:4px'>{nama}</div>
+                <div class='mono' style='color:#58a6ff;margin-bottom:8px'>NIM: {nim}</div>
+                <div style='font-size:11px;color:#8b949e;line-height:1.7'>{peran}</div>
+            </div>""", unsafe_allow_html=True)
+
+    # ── Info Akademik ─────────────────────────────────────────────────────────
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='dash-card' style='text-align:center;border:1px solid #30363d'>
+        <div style='color:#c9d1d9;font-size:13px;line-height:2.2'>
+            <b style='color:#58a6ff'>Mata Kuliah</b> &nbsp;·&nbsp; Big Data / Pemrosesan Data Skala Besar<br>
+            <b style='color:#58a6ff'>Dosen</b> &nbsp;·&nbsp; Vera Wati, M.Kom.<br>
+            <b style='color:#58a6ff'>Program Studi</b> &nbsp;·&nbsp; D4 Sistem Informasi & Komputasi Cerdas (SIKC)<br>
+            <b style='color:#58a6ff'>Institusi</b> &nbsp;·&nbsp; Politeknik Negeri Indramayu (POLINDRA)<br>
+            <b style='color:#58a6ff'>Tahun</b> &nbsp;·&nbsp; 2026
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
