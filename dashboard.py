@@ -437,7 +437,7 @@ with st.sidebar:
     menu=st.radio("",
         ["Overview","Cuaca Real-Time","Survei Petani",
          "Prediksi Risiko",
-         "Model CNN","EDA Report","Deteksi Citra","Status Pipeline"],
+         "Model CNN","EDA Report","Deteksi Citra","Status Pipeline","Tentang Sistem"],
         label_visibility="collapsed")
     st.divider()
     if pipeline_ok():
@@ -1368,3 +1368,137 @@ elif menu=="Status Pipeline":
         st.divider()
         st.markdown("**Optimasi Pipeline (optimization_comparison.csv)**")
         st.dataframe(df_opt,use_container_width=True,hide_index=True)
+
+# ══════════════════════════════ PAGE: TENTANG SISTEM ═════════════════════════
+elif menu=="Tentang Sistem":
+    st.markdown("## Tentang Sistem")
+    st.caption("Informasi lengkap mengenai RiceScan Dashboard dan tim pengembang")
+
+    st.markdown("""
+    <div class='dash-card' style='text-align:center;padding:36px 20px;border-left:4px solid #1565C0'>
+        <div style='font-size:32px;font-weight:700;color:#1565C0;margin-bottom:6px'>RiceScan Dashboard</div>
+        <div style='font-size:15px;color:#555555'>Sistem Monitoring Penyakit Daun Padi Berbasis Big Data & CNN</div>
+        <div style='font-size:13px;color:#555555;margin-top:8px'>Kabupaten Indramayu, Jawa Barat · April 2026</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    st.markdown("### Latar Belakang")
+    st.markdown("""
+    <div class='dash-card'>
+        <p style='color:#1a1a2e;line-height:1.8;margin:0'>
+        Kabupaten Indramayu adalah penghasil padi terbesar di Jawa Barat. Setiap tahun, petani menghadapi
+        ancaman serius dari penyakit daun padi yang dapat merusak hingga 70% hasil panen jika tidak
+        terdeteksi sejak dini. Selama ini deteksi dilakukan secara manual oleh petugas PPL — prosesnya
+        lambat dan sering terlambat ditangani.<br><br>
+        <b style='color:#1565C0'>RiceScan Dashboard</b> hadir sebagai solusi berbasis data yang
+        mengintegrasikan tiga sumber informasi sekaligus: data cuaca real-time, survei lapangan petani,
+        dan deteksi citra CNN — dalam satu platform monitoring terpadu yang dapat diakses secara online.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("### Penyakit yang Dideteksi")
+    col1, col2, col3, col4 = st.columns(4)
+    penyakit = [
+        ("Sehat",           "#2e7d32", "Tidak ada infeksi. Daun berwarna hijau segar dan merata."),
+        ("Blas Daun",       "#c62828", "Disebabkan jamur Magnaporthe oryzae. Bercak belah ketupat, tepi coklat. Dipicu kelembaban >80% dan suhu 24-28 C."),
+        ("Hawar Daun (Blight)", "#e65100", "Disebabkan bakteri Xanthomonas oryzae. Daun mengering dari ujung. Berkembang saat curah hujan tinggi."),
+        ("Tungro",          "#6a1b9a", "Virus dibawa wereng hijau. Daun menguning-kemerahan. Tidak ada obat, tanaman harus dicabut dan dibakar."),
+    ]
+    for col, (nama, warna, desc) in zip([col1,col2,col3,col4], penyakit):
+        with col:
+            st.markdown(f"""
+            <div class='dash-card' style='border-top:3px solid {warna};text-align:center'>
+                <div style='font-size:14px;font-weight:700;color:{warna};margin-bottom:8px'>{nama}</div>
+                <div style='font-size:11px;color:#555555;line-height:1.7'>{desc}</div>
+            </div>""", unsafe_allow_html=True)
+
+    st.markdown("### Arsitektur Sistem")
+    col_a, col_b = st.columns(2)
+    with col_a:
+        st.markdown("""
+        <div class='dash-card'>
+            <div style='font-size:13px;font-weight:700;color:#1565C0;margin-bottom:12px'>Pipeline ETL — etl_pipeline.py</div>
+            <div class='mono' style='line-height:2.2;color:#1a1a2e'>
+            EXTRACT &nbsp;&nbsp;&nbsp;&#8594; Baca citra, survei, API cuaca<br>
+            EDA_BEFORE &#8594; Statistik data mentah<br>
+            TRANSFORM &#8594; Cleaning, normalisasi, augmentasi<br>
+            EDA_AFTER &nbsp;&#8594; Statistik data bersih<br>
+            LOAD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8594; Split train/val/test CNN<br>
+            CNN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8594; Training model klasifikasi<br>
+            EVALUATE &nbsp;&nbsp;&#8594; Confusion matrix, F1, MAE, MSE<br>
+            OPTIMIZE &nbsp;&nbsp;&#8594; Benchmark konfigurasi
+            </div>
+        </div>""", unsafe_allow_html=True)
+    with col_b:
+        st.markdown("""
+        <div class='dash-card'>
+            <div style='font-size:13px;font-weight:700;color:#1565C0;margin-bottom:12px'>Sumber Data</div>
+            <div class='mono' style='line-height:2.2;color:#1a1a2e'>
+            Citra CNN &nbsp;&nbsp;&nbsp;&nbsp;&#8594; 4 kelas x 80 gambar<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(sehat / blast / blight / tungro)<br>
+            Survei Petani &#8594; 150 responden, 15 kecamatan<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;April 2026<br>
+            API Cuaca &nbsp;&nbsp;&nbsp;&nbsp;&#8594; Open-Meteo (gratis, real-time)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 stasiun GPS Indramayu<br>
+            Preprocessing &#8594; Resize 224x224, Otsu, /255
+            </div>
+        </div>""", unsafe_allow_html=True)
+
+    st.markdown("### Teknologi yang Digunakan")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("""
+        <div class='dash-card'>
+            <div style='font-size:13px;font-weight:700;color:#1565C0;margin-bottom:10px'>Framework & Library</div>
+            <div class='mono' style='line-height:2;color:#1a1a2e'>
+            Python 3.10+<br>Streamlit 1.35<br>Pandas / NumPy<br>Plotly 5.18<br>TensorFlow / Keras
+            </div>
+        </div>""", unsafe_allow_html=True)
+    with col2:
+        st.markdown("""
+        <div class='dash-card'>
+            <div style='font-size:13px;font-weight:700;color:#1565C0;margin-bottom:10px'>Data & API</div>
+            <div class='mono' style='line-height:2;color:#1a1a2e'>
+            Open-Meteo API<br>CSV Pipeline Output<br>farmer_survey_raw.csv<br>rice_disease_metadata.csv<br>confusion_matrix.csv
+            </div>
+        </div>""", unsafe_allow_html=True)
+    with col3:
+        st.markdown("""
+        <div class='dash-card'>
+            <div style='font-size:13px;font-weight:700;color:#1565C0;margin-bottom:10px'>Deploy & Infrastruktur</div>
+            <div class='mono' style='line-height:2;color:#1a1a2e'>
+            GitHub (source control)<br>Streamlit Community Cloud<br>URL: ricescan-kelompok2<br>.streamlit/config.toml<br>requirements.txt
+            </div>
+        </div>""", unsafe_allow_html=True)
+
+    st.markdown("### Tim Pengembang")
+    col1, col2, col3 = st.columns(3)
+    tim = [
+        ("Bahtiar Rifai",       "2307006", "ETL Pipeline · Backend · Deploy"),
+        ("Darmawan Almadani",   "2307008", "CNN Model · Data Processing"),
+        ("Fany Revalina Putri", "2307012", "Dashboard UI · Visualisasi · Survei"),
+    ]
+    for col, (nama, nim, peran) in zip([col1,col2,col3], tim):
+        with col:
+            st.markdown(f"""
+            <div class='dash-card' style='text-align:center;border-top:3px solid #1565C0'>
+                <div style='font-size:14px;font-weight:700;color:#1a1a2e;margin-bottom:4px'>{nama}</div>
+                <div class='mono' style='color:#1565C0;margin-bottom:8px'>NIM: {nim}</div>
+                <div style='font-size:11px;color:#555555;line-height:1.7'>{peran}</div>
+            </div>""", unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='dash-card' style='text-align:center'>
+        <div style='color:#1a1a2e;font-size:13px;line-height:2.4'>
+            <b style='color:#1565C0'>Mata Kuliah</b> &nbsp;&#183;&nbsp; Big Data / Pemrosesan Data Skala Besar<br>
+            <b style='color:#1565C0'>Dosen</b> &nbsp;&#183;&nbsp; Vera Wati, M.Kom.<br>
+            <b style='color:#1565C0'>Program Studi</b> &nbsp;&#183;&nbsp; D4 Sistem Informasi & Komputasi Cerdas (SIKC)<br>
+            <b style='color:#1565C0'>Institusi</b> &nbsp;&#183;&nbsp; Politeknik Negeri Indramayu (POLINDRA)<br>
+            <b style='color:#1565C0'>Tahun</b> &nbsp;&#183;&nbsp; 2026
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
