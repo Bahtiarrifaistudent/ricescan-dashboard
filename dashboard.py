@@ -1131,7 +1131,7 @@ elif menu=="Model CNN":
             cm_v=df_cm.values
             fig2=go.Figure(go.Heatmap(z=cm_v,
                 x=[f"Pred {c}" for c in CLASSES],y=[f"Actual {c}" for c in CLASSES],
-                colorscale=[[0,"#0d1117"],[.5,"#1f4b2a"],[1,"#3fb950"]],
+                colorscale=[[0,"#ffffff"],[0.5,"#a5d6a7"],[1,"#2e7d32"]],
                 text=cm_v,texttemplate="%{text}",textfont_size=15,showscale=False))
             fig2.update_layout(**PLT,height=300,title="Confusion Matrix (4×4)")
             st.plotly_chart(fig2,use_container_width=True)
@@ -1311,8 +1311,8 @@ elif menu=="Status Pipeline":
             el=s.get("elapsed_s"); el_str=f"<span class='mono'>{el}s</span>" if el else ""
             st.markdown(f"""
             <div style='display:flex;align-items:flex-start;gap:12px;
-                        background:{"#2b1d00" if warn else "#161b22"};
-                        border:1px solid {bc}33;border-radius:7px;
+                        background:{"#fff8e1" if warn else "#f8fbff"};
+                        border:1px solid {bc};border-radius:7px;
                         padding:8px 14px;margin-bottom:4px'>
             <span class='mono' style='color:{c};min-width:88px'>{s["step"]}</span>
             <span style='font-size:12px;color:#1a1a2e;flex:1'>{s["message"]}</span>
