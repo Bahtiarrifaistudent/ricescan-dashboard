@@ -50,8 +50,8 @@ def show_login():
         st.markdown("<br><br>", unsafe_allow_html=True)
         st.markdown("""
         <div style='text-align:center;margin-bottom:24px'>
-            <div style='font-size:28px;font-weight:700;color:#58a6ff'>RiceScan Dashboard</div>
-            <div style='font-size:13px;color:#8b949e;margin-top:4px'>Monitoring Penyakit Daun Padi — Kabupaten Indramayu</div>
+            <div style='font-size:28px;font-weight:700;color:#1565C0'>RiceScan Dashboard</div>
+            <div style='font-size:13px;color:#666666;margin-top:4px'>Monitoring Penyakit Daun Padi — Kabupaten Indramayu</div>
         </div>
         """, unsafe_allow_html=True)
         with st.form("login_form"):
@@ -67,7 +67,7 @@ def show_login():
                 else:
                     st.error("Username atau password salah.")
         st.markdown("""
-        <div style='text-align:center;margin-top:16px;font-size:11px;color:#8b949e'>
+        <div style='text-align:center;margin-top:16px;font-size:11px;color:#555555'>
         Kelompok 2 · D4 SIKC POLINDRA · 2026
         </div>""", unsafe_allow_html=True)
 
@@ -83,16 +83,16 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap');
 html,body,[class*="css"]{font-family:'Sora',sans-serif}
-[data-testid="metric-container"]{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 18px}
-[data-testid="stMetricLabel"]>div{font-size:10.5px;color:#8b949e;letter-spacing:1px;text-transform:uppercase;font-family:'DM Mono',monospace}
+[data-testid="metric-container"]{background:#ffffff;border:1px solid #e0e0e0;border-radius:10px;padding:14px 18px;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+[data-testid="stMetricLabel"]>div{font-size:10.5px;color:#666666;letter-spacing:1px;text-transform:uppercase;font-family:'DM Mono',monospace}
 [data-testid="stMetricValue"]>div{font-size:22px;font-weight:700}
-[data-testid="stSidebar"]{background:#0d1117;border-right:1px solid #21262d}
-[data-testid="stSidebar"] *{color:#c9d1d9}
-.dash-card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 20px;margin-bottom:12px}
-.mono{font-family:'DM Mono',monospace;font-size:11px;color:#8b949e}
-hr{border-color:#21262d}
+[data-testid="stSidebar"]{background:#f0f4f8;border-right:1px solid #e0e0e0}
+[data-testid="stSidebar"] *{color:#1a1a2e}
+.dash-card{background:#ffffff;border:1px solid #e0e0e0;border-radius:10px;padding:16px 20px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,0.07)}
+.mono{font-family:'DM Mono',monospace;font-size:11px;color:#555555}
+hr{border-color:#e0e0e0}
 .risk-aman{color:#3fb950;font-weight:700}
-.risk-rendah{color:#58a6ff;font-weight:700}
+.risk-rendah{color:#1565C0;font-weight:700}
 .risk-sedang{color:#d29922;font-weight:700}
 .risk-tinggi{color:#f0883e;font-weight:700}
 .risk-kritis{color:#f85149;font-weight:700}
@@ -394,13 +394,13 @@ with st.sidebar:
     musim="Rendeng (Hujan)" if now.month in [10,11,12,1,2,3] else "Gadu (Kemarau)"
     st.markdown(f"""
     <div class='mono' style='line-height:1.9'>
-    <b style='color:#c9d1d9'>Waktu</b><br>{now.strftime('%d %b %Y %H:%M')}<br>
-    <b style='color:#c9d1d9'>Musim</b><br>{musim}<br><br>
-    <b style='color:#c9d1d9'>Kelompok 2</b><br>
+    <b style='color:#1a1a2e'>Waktu</b><br>{now.strftime('%d %b %Y %H:%M')}<br>
+    <b style='color:#1a1a2e'>Musim</b><br>{musim}<br><br>
+    <b style='color:#1a1a2e'>Kelompok 2</b><br>
     Bahtiar Rifai (2307006)<br>
     Darmawan Almadani (2307008)<br>
     Fany Revalina Putri (2307012)<br><br>
-    <b style='color:#c9d1d9'>Dosen</b><br>Vera Wati, M.Kom.<br>
+    <b style='color:#1a1a2e'>Dosen</b><br>Vera Wati, M.Kom.<br>
     D4 SIKC · POLINDRA
     </div>""",unsafe_allow_html=True)
     if st.button("Refresh Data",use_container_width=True):
@@ -843,9 +843,9 @@ elif menu=="Prediksi Risiko":
                   <div style='font-size:20px;font-weight:700;color:#d29922'>{survey_mult:.2f}×</div>
                 </div>
               </div>
-              <div style='padding:10px 12px;background:#0d1117;border-radius:6px;
-                          border-left:3px solid #58a6ff;font-size:12px;
-                          color:#c9d1d9;line-height:1.7'>
+              <div style='padding:10px 12px;background:#f0f4f8;border-radius:6px;
+                          border-left:3px solid #1565C0;font-size:12px;
+                          color:#1a1a2e;line-height:1.7'>
                 {REKOM[pred_label]}
               </div>
             </div>""", unsafe_allow_html=True)
@@ -919,16 +919,16 @@ elif menu=="Prediksi Risiko":
                 for label_sv, val_sv, impact_sv, c_sv in sv_items:
                     st.markdown(f"""
                     <div style='display:flex;justify-content:space-between;align-items:center;
-                                padding:8px 0;border-bottom:1px solid #21262d'>
-                      <span style='font-size:12px;color:#8b949e'>{label_sv}</span>
+                                padding:8px 0;border-bottom:1px solid #e0e0e0'>
+                      <span style='font-size:12px;color:#555555'>{label_sv}</span>
                       <span style='font-weight:700;color:{c_sv}'>{val_sv}</span>
                       <span class='mono' style='font-size:10px;color:{c_sv};width:160px;text-align:right'>{impact_sv}</span>
                     </div>""", unsafe_allow_html=True)
                 st.markdown(f"""
-                <div style='margin-top:12px;padding:10px;background:#0d1117;border-radius:6px'>
+                <div style='margin-top:12px;padding:10px;background:#f0f4f8;border-radius:6px'>
                   <div class='mono'>Total Multiplier Survei:
                     <b style='color:#d29922;font-size:16px'>{survey_mult:.3f}×</b>
-                    <span style='color:#8b949e'> (normal = 1.0×)</span>
+                    <span style='color:#555555'> (normal = 1.0×)</span>
                   </div>
                 </div>""", unsafe_allow_html=True)
 
@@ -942,7 +942,7 @@ elif menu=="Prediksi Risiko":
                         <div style='display:flex;align-items:center;gap:10px;margin-bottom:6px'>
                           <span style='width:58px;font-size:12px;font-weight:600;
                                        color:{CLS_COLOR[cls]}'>{cls.capitalize()}</span>
-                          <div style='flex:1;height:8px;background:#21262d;
+                          <div style='flex:1;height:8px;background:#f5f5f5;
                                       border-radius:4px;overflow:hidden'>
                             <div style='width:{pct_i}%;height:100%;
                                         background:{CLS_COLOR[cls]};border-radius:4px'></div>
@@ -982,10 +982,10 @@ elif menu=="Prediksi Risiko":
             # Tampilan sebelum prediksi dijalankan
             st.markdown("""
             <div class='dash-card' style='text-align:center;padding:48px 20px'>
-              <div style='font-size:16px;font-weight:600;color:#c9d1d9;margin-bottom:8px'>
+              <div style='font-size:16px;font-weight:600;color:#1a1a2e;margin-bottom:8px'>
                 Isi form di sebelah kiri, lalu klik
               </div>
-              <div style='font-size:14px;color:#58a6ff;font-weight:700'>
+              <div style='font-size:14px;color:#1565C0;font-weight:700'>
                 Prediksi Risiko
               </div>
               <div class='mono' style='margin-top:16px;line-height:2'>
@@ -1180,9 +1180,9 @@ elif menu=="Deteksi Citra":
                 <div class='mono' style='margin-top:4px'>
                 Confidence: <b style='color:{c}'>{conf}%</b> · Status: <b style='color:{sc}'>{status}</b>
                 </div>
-                <div style='margin-top:12px;font-size:12px;color:#c9d1d9;
-                            padding:10px 12px;background:#0d1117;border-radius:6px;
-                            border-left:3px solid #58a6ff;line-height:1.7'>{REKOM[label]}</div>
+                <div style='margin-top:12px;font-size:12px;color:#1a1a2e;
+                            padding:10px 12px;background:#f0f4f8;border-radius:6px;
+                            border-left:3px solid #1565C0;line-height:1.7'>{REKOM[label]}</div>
                 </div>""",unsafe_allow_html=True)
                 st.markdown("**Probabilitas Softmax (4 Kelas)**")
                 for cls,prob in sorted(probs.items(),key=lambda x:-x[1]):
@@ -1190,7 +1190,7 @@ elif menu=="Deteksi Citra":
                     st.markdown(f"""
                     <div style='display:flex;align-items:center;gap:10px;margin-bottom:6px'>
                     <span style='width:58px;font-size:12px;font-weight:600;color:{CLS_COLOR[cls]}'>{cls.capitalize()}</span>
-                    <div style='flex:1;height:8px;background:#21262d;border-radius:4px;overflow:hidden'>
+                    <div style='flex:1;height:8px;background:#f5f5f5;border-radius:4px;overflow:hidden'>
                     <div style='width:{pct}%;height:100%;background:{CLS_COLOR[cls]};border-radius:4px'></div></div>
                     <span class='mono' style='width:44px;text-align:right;color:{CLS_COLOR[cls]};font-weight:600'>{pct}%</span>
                     </div>""",unsafe_allow_html=True)
@@ -1208,7 +1208,7 @@ elif menu=="Deteksi Citra":
             ("Augmentasi","flip, rotasi ±20°, zoom 15%, shift 15%"),
         ]:
             st.markdown(f"""
-            <div style='display:flex;gap:10px;padding:7px 0;border-bottom:1px solid #21262d'>
+            <div style='display:flex;gap:10px;padding:7px 0;border-bottom:1px solid #e0e0e0'>
             <span style='font-weight:600;font-size:12px;width:90px;color:#3fb950'>{step}</span>
             <span class='mono'>{desc}</span></div>""",unsafe_allow_html=True)
         st.divider()
@@ -1220,7 +1220,7 @@ elif menu=="Deteksi Citra":
         for cls in CLASSES:
             st.markdown(f"""
             <div style='display:flex;align-items:center;gap:10px;
-                        padding:7px 0;border-bottom:1px solid #21262d'>
+                        padding:7px 0;border-bottom:1px solid #e0e0e0'>
             <div style='width:10px;height:10px;border-radius:50%;
                         background:{CLS_COLOR[cls]};flex-shrink:0'></div>
             <span style='font-weight:600;font-size:12px;width:58px;color:{CLS_COLOR[cls]}'>{cls.capitalize()}</span>
@@ -1262,7 +1262,7 @@ elif menu=="Status Pipeline":
                         border:1px solid {bc}33;border-radius:7px;
                         padding:8px 14px;margin-bottom:4px'>
             <span class='mono' style='color:{c};min-width:88px'>{s["step"]}</span>
-            <span style='font-size:12px;color:#c9d1d9;flex:1'>{s["message"]}</span>
+            <span style='font-size:12px;color:#1a1a2e;flex:1'>{s["message"]}</span>
             {el_str}</div>""",unsafe_allow_html=True)
 
     st.divider()
@@ -1324,9 +1324,9 @@ elif menu=="Tentang Sistem":
     # ── Hero ──────────────────────────────────────────────────────────────────
     st.markdown("""
     <div class='dash-card' style='text-align:center;padding:36px 20px;border-left:4px solid #58a6ff'>
-        <div style='font-size:32px;font-weight:700;color:#58a6ff;margin-bottom:6px'>RiceScan Dashboard</div>
-        <div style='font-size:15px;color:#8b949e'>Sistem Monitoring Penyakit Daun Padi Berbasis Big Data & CNN</div>
-        <div style='font-size:13px;color:#8b949e;margin-top:8px'>Kabupaten Indramayu, Jawa Barat · April 2026</div>
+        <div style='font-size:32px;font-weight:700;color:#1565C0;margin-bottom:6px'>RiceScan Dashboard</div>
+        <div style='font-size:15px;color:#555555'>Sistem Monitoring Penyakit Daun Padi Berbasis Big Data & CNN</div>
+        <div style='font-size:13px;color:#555555;margin-top:8px'>Kabupaten Indramayu, Jawa Barat · April 2026</div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -1336,12 +1336,12 @@ elif menu=="Tentang Sistem":
     st.markdown("### Latar Belakang")
     st.markdown("""
     <div class='dash-card'>
-        <p style='color:#c9d1d9;line-height:1.8;margin:0'>
+        <p style='color:#1a1a2e;line-height:1.8;margin:0'>
         Kabupaten Indramayu adalah penghasil padi terbesar di Jawa Barat. Setiap tahun, petani menghadapi
         ancaman serius dari penyakit daun padi yang dapat merusak hingga 70% hasil panen jika tidak
         terdeteksi sejak dini. Selama ini deteksi dilakukan secara manual oleh petugas PPL — prosesnya
         lambat dan sering terlambat ditangani.<br><br>
-        <b style='color:#58a6ff'>RiceScan Dashboard</b> hadir sebagai solusi berbasis data yang
+        <b style='color:#1565C0'>RiceScan Dashboard</b> hadir sebagai solusi berbasis data yang
         mengintegrasikan tiga sumber informasi sekaligus: data cuaca real-time, survei lapangan petani,
         dan deteksi citra CNN — dalam satu platform monitoring terpadu yang dapat diakses secara online.
         </p>
@@ -1362,7 +1362,7 @@ elif menu=="Tentang Sistem":
             st.markdown(f"""
             <div class='dash-card' style='border-top:3px solid {warna};text-align:center'>
                 <div style='font-size:14px;font-weight:700;color:{warna};margin-bottom:8px'>{nama}</div>
-                <div style='font-size:11px;color:#8b949e;line-height:1.7'>{desc}</div>
+                <div style='font-size:11px;color:#555555;line-height:1.7'>{desc}</div>
             </div>""", unsafe_allow_html=True)
 
     # ── Arsitektur Sistem ─────────────────────────────────────────────────────
@@ -1371,8 +1371,8 @@ elif menu=="Tentang Sistem":
     with col_a:
         st.markdown("""
         <div class='dash-card'>
-            <div style='font-size:13px;font-weight:700;color:#58a6ff;margin-bottom:12px'>Pipeline ETL — etl_pipeline.py</div>
-            <div class='mono' style='line-height:2.2;color:#c9d1d9'>
+            <div style='font-size:13px;font-weight:700;color:#1565C0;margin-bottom:12px'>Pipeline ETL — etl_pipeline.py</div>
+            <div class='mono' style='line-height:2.2;color:#1a1a2e'>
             EXTRACT &nbsp;&nbsp;&nbsp;→ Baca citra, survei, API cuaca<br>
             EDA_BEFORE → Statistik data mentah<br>
             TRANSFORM → Cleaning, normalisasi, augmentasi<br>
@@ -1386,8 +1386,8 @@ elif menu=="Tentang Sistem":
     with col_b:
         st.markdown("""
         <div class='dash-card'>
-            <div style='font-size:13px;font-weight:700;color:#58a6ff;margin-bottom:12px'>Sumber Data</div>
-            <div class='mono' style='line-height:2.2;color:#c9d1d9'>
+            <div style='font-size:13px;font-weight:700;color:#1565C0;margin-bottom:12px'>Sumber Data</div>
+            <div class='mono' style='line-height:2.2;color:#1a1a2e'>
             Citra CNN &nbsp;&nbsp;&nbsp;&nbsp;→ 4 kelas × 80 gambar<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(sehat / blast / blight / tungro)<br>
             Survei Petani → 150 responden, 15 kecamatan<br>
@@ -1404,24 +1404,24 @@ elif menu=="Tentang Sistem":
     with col1:
         st.markdown("""
         <div class='dash-card'>
-            <div style='font-size:13px;font-weight:700;color:#58a6ff;margin-bottom:10px'>Framework & Library</div>
-            <div class='mono' style='line-height:2;color:#c9d1d9'>
+            <div style='font-size:13px;font-weight:700;color:#1565C0;margin-bottom:10px'>Framework & Library</div>
+            <div class='mono' style='line-height:2;color:#1a1a2e'>
             Python 3.10+<br>Streamlit 1.35<br>Pandas / NumPy<br>Plotly 5.18<br>TensorFlow / Keras
             </div>
         </div>""", unsafe_allow_html=True)
     with col2:
         st.markdown("""
         <div class='dash-card'>
-            <div style='font-size:13px;font-weight:700;color:#58a6ff;margin-bottom:10px'>Data & API</div>
-            <div class='mono' style='line-height:2;color:#c9d1d9'>
+            <div style='font-size:13px;font-weight:700;color:#1565C0;margin-bottom:10px'>Data & API</div>
+            <div class='mono' style='line-height:2;color:#1a1a2e'>
             Open-Meteo API<br>CSV Pipeline Output<br>farmer_survey_raw.csv<br>rice_disease_metadata.csv<br>confusion_matrix.csv
             </div>
         </div>""", unsafe_allow_html=True)
     with col3:
         st.markdown("""
         <div class='dash-card'>
-            <div style='font-size:13px;font-weight:700;color:#58a6ff;margin-bottom:10px'>Deploy & Infrastruktur</div>
-            <div class='mono' style='line-height:2;color:#c9d1d9'>
+            <div style='font-size:13px;font-weight:700;color:#1565C0;margin-bottom:10px'>Deploy & Infrastruktur</div>
+            <div class='mono' style='line-height:2;color:#1a1a2e'>
             GitHub (source control)<br>Streamlit Community Cloud<br>URL: ricescan-kelompok2<br>.streamlit/config.toml<br>requirements.txt
             </div>
         </div>""", unsafe_allow_html=True)
@@ -1437,22 +1437,22 @@ elif menu=="Tentang Sistem":
     for col, (nama, nim, peran) in zip([col1,col2,col3], tim):
         with col:
             st.markdown(f"""
-            <div class='dash-card' style='text-align:center;border-top:3px solid #58a6ff'>
-                <div style='font-size:14px;font-weight:700;color:#c9d1d9;margin-bottom:4px'>{nama}</div>
-                <div class='mono' style='color:#58a6ff;margin-bottom:8px'>NIM: {nim}</div>
-                <div style='font-size:11px;color:#8b949e;line-height:1.7'>{peran}</div>
+            <div class='dash-card' style='text-align:center;border-top:3px solid #1565C0'>
+                <div style='font-size:14px;font-weight:700;color:#1a1a2e;margin-bottom:4px'>{nama}</div>
+                <div class='mono' style='color:#1565C0;margin-bottom:8px'>NIM: {nim}</div>
+                <div style='font-size:11px;color:#555555;line-height:1.7'>{peran}</div>
             </div>""", unsafe_allow_html=True)
 
     # ── Info Akademik ─────────────────────────────────────────────────────────
     st.markdown("<br>", unsafe_allow_html=True)
     st.markdown("""
-    <div class='dash-card' style='text-align:center;border:1px solid #30363d'>
-        <div style='color:#c9d1d9;font-size:13px;line-height:2.2'>
-            <b style='color:#58a6ff'>Mata Kuliah</b> &nbsp;·&nbsp; Big Data / Pemrosesan Data Skala Besar<br>
-            <b style='color:#58a6ff'>Dosen</b> &nbsp;·&nbsp; Vera Wati, M.Kom.<br>
-            <b style='color:#58a6ff'>Program Studi</b> &nbsp;·&nbsp; D4 Sistem Informasi & Komputasi Cerdas (SIKC)<br>
-            <b style='color:#58a6ff'>Institusi</b> &nbsp;·&nbsp; Politeknik Negeri Indramayu (POLINDRA)<br>
-            <b style='color:#58a6ff'>Tahun</b> &nbsp;·&nbsp; 2026
+    <div class='dash-card' style='text-align:center;border:1px solid #e0e0e0'>
+        <div style='color:#1a1a2e;font-size:13px;line-height:2.2'>
+            <b style='color:#1565C0'>Mata Kuliah</b> &nbsp;·&nbsp; Big Data / Pemrosesan Data Skala Besar<br>
+            <b style='color:#1565C0'>Dosen</b> &nbsp;·&nbsp; Vera Wati, M.Kom.<br>
+            <b style='color:#1565C0'>Program Studi</b> &nbsp;·&nbsp; D4 Sistem Informasi & Komputasi Cerdas (SIKC)<br>
+            <b style='color:#1565C0'>Institusi</b> &nbsp;·&nbsp; Politeknik Negeri Indramayu (POLINDRA)<br>
+            <b style='color:#1565C0'>Tahun</b> &nbsp;·&nbsp; 2026
         </div>
     </div>
     """, unsafe_allow_html=True)
