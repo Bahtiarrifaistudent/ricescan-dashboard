@@ -25,7 +25,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
 import json, math, random, hashlib, os, time, urllib.request
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+WIB = timezone(timedelta(hours=7))
 
 st.set_page_config(
     page_title="Dashboard Penyakit Daun Padi - Indramayu",
@@ -163,7 +164,7 @@ def fetch_weather_live():
         {"id":"STN04","kecamatan":"Patrol",     "lat":-6.36,"lon":107.72},
         {"id":"STN05","kecamatan":"Kandanghaur","lat":-6.44,"lon":107.98},
     ]
-    now=datetime.now(); is_rendeng=now.month in [10,11,12,1,2,3]
+    now=datetime.now(WIB); is_rendeng=now.month in [10,11,12,1,2,3]
     res=[]
     for stn in STASIUN:
         try:
@@ -344,7 +345,7 @@ with st.sidebar:
         st.success("Pipeline sudah dijalankan")
     else:
         st.warning("Pipeline belum dijalankan\n\n`python etl_pipeline.py`")
-    now=datetime.now()
+    now=datetime.now(WIB)
     musim="Rendeng (Hujan)" if now.month in [10,11,12,1,2,3] else "Gadu (Kemarau)"
     st.markdown(f"""
     <div class='mono' style='line-height:1.9'>
