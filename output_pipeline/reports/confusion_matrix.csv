@@ -1,0 +1,5 @@
+,pred_sehat,pred_blast,pred_blight,pred_tungro
+actual_sehat,0,16,0,0
+actual_blast,0,16,0,0
+actual_blight,0,16,0,0
+actual_tungro,0,16,0,0

@@ -1,0 +1,59 @@
+=================================================================
+  EDA SEBELUM TRANSFORM – DATA MENTAH (RAW)
+  Dijalankan: 2026-04-12 13:26:50
+=================================================================
+
+── 1. DISTRIBUSI KELAS CITRA ─────────────────────────────
+
+  sehat    :   80 ( 25.0%)  ██████████
+  blast    :   80 ( 25.0%)  ██████████
+  blight   :   80 ( 25.0%)  ██████████
+  tungro   :   80 ( 25.0%)  ██████████
+
+  Total citra      : 320
+  Duplikat (hash)  : 1
+  Missing values   : 0
+  Dataset balanced : YA ✅
+
+── 2. STATISTIK DESKRIPTIF SURVEI PETANI ─────────────────
+
+  Kolom                            Min     Mean     Max  Missing
+  ----------------------------------------------------------
+  luas_lahan_ha                    0.5     1.40     3.0        0
+  persentase_serangan              0.0    52.40    93.0        0
+  estimasi_kerugian_pct            0.0    42.21    89.0        0
+  jarak_ke_PPL_km                  3.2     9.01    18.1        0
+  durasi_gejala_hari               0.0    10.47    22.0        0
+  skor_kepuasan_petani             1.0     3.14     5.0        0
+
+  Distribusi kondisi lahan:
+    blast   :  48 petani
+    tungro  :  43 petani
+    blight  :  33 petani
+    sehat   :  26 petani
+
+── 3. STATISTIK DESKRIPTIF CUACA REAL-TIME ───────────────
+
+  Kolom                        Min     Mean     Max
+  ------------------------------------------------
+  temperature_c               23.9    28.35    34.3
+  humidity_pct                54.0    81.95    98.0
+  precipitation_mm             0.0     0.17     2.8
+  wind_speed_kmh               0.0     5.60    16.8
+  drought_index                0.0     0.33     0.8
+
+── 4. DETEKSI MASALAH DATA MENTAH ────────────────────────
+
+  Citra   : missing=   0 | duplikat=  0 | baris=  320
+  Survei  : missing=   0 | duplikat=  0 | baris=  150
+  Cuaca   : missing=   0 | duplikat=  0 | baris=  360
+
+  Catatan: Missing value dan duplikat akan ditangani di fase TRANSFORM.
+
+── 5. KORELASI NUMERIK (SURVEI PETANI) ───────────────────
+
+                                luas_la  persent  estimas  jarak_k
+  luas_lahan_ha                   1.000    0.157    0.149    0.176
+  persentase_serangan             0.157    1.000    0.975    0.529
+  estimasi_kerugian_pct           0.149    0.975    1.000    0.650
+  jarak_ke_PPL_km                 0.176    0.529    0.650    1.000

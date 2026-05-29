@@ -1,0 +1,5 @@
+Tahap,Waktu_Sebelum_ms,Waktu_Sesudah_ms,Keterangan
+Preprocessing (loop),0.0,—,Python list comprehension
+Preprocessing (vectorized),—,20.041,pd.cut() vectorized
+Multi-source JOIN,0.0,—,Sebelum indexing kolom kunci
+Agregasi cuaca/survei,—,26.053,Setelah groupby vectorized

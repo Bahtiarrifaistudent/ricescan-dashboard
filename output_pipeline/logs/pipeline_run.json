@@ -1,0 +1,348 @@
+{
+  "pipeline_run": "2026-04-12T13:31:01.360706",
+  "dataset_dir": "./Penyakit_Daun_Padi_Indonesia",
+  "total_elapsed_s": 255.365,
+  "cnn_accuracy": 0.25,
+  "mae": 1.0,
+  "mse": 1.5,
+  "dataset": {
+    "n_kelas": 4,
+    "kelas": [
+      "sehat",
+      "blast",
+      "blight",
+      "tungro"
+    ],
+    "n_survei": 150,
+    "wilayah": "Kabupaten Indramayu",
+    "periode": "April 2026",
+    "n_final": 319,
+    "n_fitur": 31
+  },
+  "steps": [
+    {
+      "timestamp": "13:26:45",
+      "step": "EXTRACT",
+      "message": "[Citra] Membaca dataset dari: ./Penyakit_Daun_Padi_Indonesia",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:46",
+      "step": "EXTRACT",
+      "message": "  ✅ sehat   :  80 citra (train/val/test akan dibagi 80/10/10)",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:46",
+      "step": "EXTRACT",
+      "message": "  ✅ blast   :  80 citra (train/val/test akan dibagi 80/10/10)",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:46",
+      "step": "EXTRACT",
+      "message": "  ✅ blight  :  80 citra (train/val/test akan dibagi 80/10/10)",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:46",
+      "step": "EXTRACT",
+      "message": "  ✅ tungro  :  80 citra (train/val/test akan dibagi 80/10/10)",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:46",
+      "step": "EXTRACT",
+      "message": "  Total: 320 citra | ./output_pipeline\\data\\rice_disease_metadata.csv",
+      "elapsed_s": 0.5639
+    },
+    {
+      "timestamp": "13:26:46",
+      "step": "EXTRACT",
+      "message": "[Survei] Membaca data survei petani Indramayu ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:46",
+      "step": "EXTRACT",
+      "message": "  ✅ Survei dibaca: farmer_survey_raw.csv",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:46",
+      "step": "EXTRACT",
+      "message": "  Total: 150 responden | 20 kolom",
+      "elapsed_s": 0.0373
+    },
+    {
+      "timestamp": "13:26:46",
+      "step": "EXTRACT",
+      "message": "  Distribusi: {'blast': 48, 'tungro': 43, 'blight': 33, 'sehat': 26}",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:46",
+      "step": "EXTRACT",
+      "message": "[API Cuaca] Memanggil Open-Meteo API ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:47",
+      "step": "EXTRACT",
+      "message": "  ✅ Indramayu      : 72 jam",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:48",
+      "step": "EXTRACT",
+      "message": "  ✅ Jatibarang     : 72 jam",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:48",
+      "step": "EXTRACT",
+      "message": "  ✅ Haurgeulis     : 72 jam",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:49",
+      "step": "EXTRACT",
+      "message": "  ✅ Patrol         : 72 jam",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "EXTRACT",
+      "message": "  ✅ Kandanghaur    : 72 jam",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "EXTRACT",
+      "message": "  Total: 360 record | 5 kecamatan | Sumber: Open-Meteo API ✅",
+      "elapsed_s": 3.9046
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "EDA_BEFORE",
+      "message": "EDA sebelum transform ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "EDA_BEFORE",
+      "message": "  Laporan EDA disimpan: ./output_pipeline\\eda\\eda_sebelum_transform.txt",
+      "elapsed_s": 0.0634
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "TRANSFORM",
+      "message": "[Survei] Preprocessing (150 record) ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "TRANSFORM",
+      "message": "  Survei: 150 → 150 record bersih",
+      "elapsed_s": 0.0219
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "TRANSFORM",
+      "message": "[Citra] Preprocessing (320 citra) ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "TRANSFORM",
+      "message": "  Citra: 320 → 319 (dedup -1) | Resize: 224×224 | Binerisasi: Otsu | Prescale: /255",
+      "elapsed_s": 0.0049
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "TRANSFORM",
+      "message": "  Split: train=248 | val=36 | test=35",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "TRANSFORM",
+      "message": "[Cuaca] Agregasi per kecamatan ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "TRANSFORM",
+      "message": "  Cuaca: 5 kecamatan teragregasi",
+      "elapsed_s": 0.0222
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "TRANSFORM",
+      "message": "[Integrasi] Menggabungkan 3 sumber data ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "TRANSFORM",
+      "message": "  Dataset: 319 baris × 31 kolom | missing=0",
+      "elapsed_s": 0.0283
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "EDA_AFTER",
+      "message": "EDA setelah preprocessing ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "EDA_AFTER",
+      "message": "  Laporan EDA disimpan: ./output_pipeline\\eda\\eda_setelah_preprocessing.txt",
+      "elapsed_s": 0.008
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "LOAD",
+      "message": "Menyimpan data latih ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "LOAD",
+      "message": "  final_clean_dataset.csv: 90.2 KB",
+      "elapsed_s": 0.0311
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "LOAD",
+      "message": "  Manifest CNN: train/val/test tersimpan di ./output_pipeline\\data/",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "CNN",
+      "message": "Memulai CNN pipeline (4 kelas) ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:26:50",
+      "step": "CNN",
+      "message": "  Arsitektur: Input(224×224×3) → Conv(32-64-128) → GAP → Dense(256) → Softmax(4)",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:27:00",
+      "step": "CNN",
+      "message": "  TensorFlow 2.20.0 – training nyata ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:27:00",
+      "step": "CNN",
+      "message": "  Parameter: 128,196",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "CNN",
+      "message": "  Selesai | Acc=25.00% | F1=0.1000 | MAE=1.0 | MSE=1.5 | NYATA",
+      "elapsed_s": 250.5909
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "EVALUATE",
+      "message": "Evaluasi performa pipeline ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "EVALUATE",
+      "message": "  Volume data:",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "EVALUATE",
+      "message": "    Metadata citra (dari folder asli)         :    48.6 KB",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "EVALUATE",
+      "message": "    Survei petani Indramayu Apr 2026          :    20.6 KB",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "EVALUATE",
+      "message": "    Cuaca real-time (Open-Meteo / fallback)   :    41.8 KB",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "EVALUATE",
+      "message": "    Dataset terintegrasi 3 sumber             :    90.2 KB",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "EVALUATE",
+      "message": "    Dataset final siap latih CNN              :    90.2 KB",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "EVALUATE",
+      "message": "    TOTAL                                     :   291.4 KB",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "EVALUATE",
+      "message": "  Kualitas: missing=0 | duplikat=0 | BAIK ✅",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "EVALUATE",
+      "message": "  Bottleneck: [CNN] ~250.5909s",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "EVALUATE",
+      "message": "Evaluasi selesai",
+      "elapsed_s": 0.0438
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "OPTIMIZE",
+      "message": "Demonstrasi optimasi preprocessing ...",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "OPTIMIZE",
+      "message": "  Sebelum (loop)   : 0.000 ms",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "OPTIMIZE",
+      "message": "  Sesudah (pd.cut) : 20.041 ms",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "OPTIMIZE",
+      "message": "  Peningkatan      : -2004098892.2%",
+      "elapsed_s": null
+    },
+    {
+      "timestamp": "13:31:01",
+      "step": "OPTIMIZE",
+      "message": "Optimasi selesai",
+      "elapsed_s": 0.0221
+    }
+  ]
+}

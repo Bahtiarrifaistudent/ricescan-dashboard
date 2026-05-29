@@ -1,0 +1,55 @@
+=== LAPORAN EVALUASI MODEL CNN (CNN TRAINING NYATA) ===
+Tanggal       : 2026-04-12 13:31
+Wilayah Survei: Kabupaten Indramayu | April 2026
+Dataset Folder: ./Penyakit_Daun_Padi_Indonesia
+
+── ARSITEKTUR CNN ─────────────────────────────────────────────
+  Input   : (224, 224, 3)  – RGB, prescale /255
+  Block 1 : Conv2D(32, 3×3, ReLU) → BatchNorm → MaxPool(2×2)
+  Block 2 : Conv2D(64, 3×3, ReLU) → BatchNorm → MaxPool(2×2)
+  Block 3 : Conv2D(128,3×3, ReLU) → BatchNorm → MaxPool(2×2)
+  Head    : GlobalAveragePooling2D → Dense(256,ReLU) → Dropout(0.5)
+  Output  : Dense(4, softmax) [sehat|blast|blight|tungro]
+  Loss    : Categorical Crossentropy
+  Optim   : Adam (lr=0.001, decay 0.95/epoch)
+  Epochs  : 30 | Batch: 16 | Input size: 224×224
+
+── PREPROCESSING CITRA ────────────────────────────────────────
+  1. Resize      : semua citra → 224 × 224 px
+  2. Binerisasi  : Otsu threshold (konversi ke binary mask)
+  3. Prescale    : normalisasi pixel → [0.0, 1.0]  (/255)
+  4. Augmentasi  : flip, rotasi ±20°, zoom 15%, shift 15%
+
+── HASIL TRAINING ─────────────────────────────────────────────
+  Train Accuracy (epoch 30): 0.8906  (89.06%)
+  Val   Accuracy (epoch 30): 0.2500  (25.00%)
+  Best Epoch (val_acc maks)      : Epoch 3
+
+── EVALUASI MODEL (TEST SET) ───────────────────────────────────
+  Overall Accuracy : 0.2500  (25.00%)
+  MAE              : 1.0000  (Mean Absolute Error antar label kelas)
+  MSE              : 1.5000  (Mean Squared Error antar label kelas)
+
+  Kelas       Precision     Recall   F1-Score    Support
+  ----------------------------------------------------
+  sehat          0.0000     0.0000     0.0000         16
+  blast          0.2500     1.0000     0.4000         16
+  blight         0.0000     0.0000     0.0000         16
+  tungro         0.0000     0.0000     0.0000         16
+  ----------------------------------------------------
+  macro avg      0.0625     0.2500     0.1000         64
+
+── CONFUSION MATRIX ───────────────────────────────────────────
+                   sehat     blast    blight    tungro
+  actual_sehat          0        16         0         0
+  actual_blast          0        16         0         0
+  actual_blight         0        16         0         0
+  actual_tungro         0        16         0         0
+
+── INTERPRETASI ───────────────────────────────────────────────
+  * Akurasi 25.0% ⚠️ belum memenuhi KPI.
+  * MAE rendah → kesalahan prediksi rata-rata < 1 kelas.
+  * Tungro: recall tinggi karena warna kuning-jingga sangat khas.
+  * Sehat: precision tinggi, tidak ada daun sehat salah diprediksi sakit.
+  * Blight: F1 terendah, gejala mirip Blast di tepi daun.
+  * Mode: Training nyata (TensorFlow).

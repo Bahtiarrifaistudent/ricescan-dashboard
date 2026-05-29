@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.venv/
+env/
+
+# Dataset gambar (bisa ratusan MB — jangan diupload)
+Penyakit_Daun_Padi_Indonesia/
+
+# Model Keras/TF (besar, deploy tanpa ini)
+*.keras
+*.h5
+*.pb
+output_pipeline/best_model.keras
+output_pipeline/best_model.h5
+
+# File sistem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp

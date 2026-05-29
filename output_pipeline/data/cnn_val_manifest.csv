@@ -1,0 +1,37 @@
+image_id,filename,disease_label,disease_code,relative_path,full_path,split
+SEH007,Healthy_rice_leaf (101).jpg,sehat,0,sehat\Healthy_rice_leaf (101).jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\sehat\Healthy_rice_leaf (101).jpg,val
+SEH019,Healthy_rice_leaf (118).jpg,sehat,0,sehat\Healthy_rice_leaf (118).jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\sehat\Healthy_rice_leaf (118).jpg,val
+SEH021,Healthy_rice_leaf (120).jpg,sehat,0,sehat\Healthy_rice_leaf (120).jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\sehat\Healthy_rice_leaf (120).jpg,val
+SEH029,Healthy_rice_leaf (22).jpg,sehat,0,sehat\Healthy_rice_leaf (22).jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\sehat\Healthy_rice_leaf (22).jpg,val
+SEH031,Healthy_rice_leaf (25).jpg,sehat,0,sehat\Healthy_rice_leaf (25).jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\sehat\Healthy_rice_leaf (25).jpg,val
+SEH037,Healthy_rice_leaf (33).jpg,sehat,0,sehat\Healthy_rice_leaf (33).jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\sehat\Healthy_rice_leaf (33).jpg,val
+SEH039,Healthy_rice_leaf (35).jpg,sehat,0,sehat\Healthy_rice_leaf (35).jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\sehat\Healthy_rice_leaf (35).jpg,val
+SEH065,Healthy_rice_leaf (7).jpg,sehat,0,sehat\Healthy_rice_leaf (7).jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\sehat\Healthy_rice_leaf (7).jpg,val
+SEH073,Healthy_rice_leaf (8).jpg,sehat,0,sehat\Healthy_rice_leaf (8).jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\sehat\Healthy_rice_leaf (8).jpg,val
+BLA004,IMG_0541.jpg,blast,1,blast\IMG_0541.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blast\IMG_0541.jpg,val
+BLA020,IMG_0563.jpg,blast,1,blast\IMG_0563.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blast\IMG_0563.jpg,val
+BLA031,IMG_0602.jpg,blast,1,blast\IMG_0602.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blast\IMG_0602.jpg,val
+BLA036,IMG_0611.jpg,blast,1,blast\IMG_0611.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blast\IMG_0611.jpg,val
+BLA049,IMG_0648.jpg,blast,1,blast\IMG_0648.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blast\IMG_0648.jpg,val
+BLA050,IMG_0649.jpg,blast,1,blast\IMG_0649.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blast\IMG_0649.jpg,val
+BLA053,IMG_0652.jpg,blast,1,blast\IMG_0652.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blast\IMG_0652.jpg,val
+BLA064,IMG_0691.jpg,blast,1,blast\IMG_0691.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blast\IMG_0691.jpg,val
+BLI005,IMG_0939.jpg,blight,2,blight\IMG_0939.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blight\IMG_0939.jpg,val
+BLI015,IMG_0956.jpg,blight,2,blight\IMG_0956.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blight\IMG_0956.jpg,val
+BLI027,IMG_0983.jpg,blight,2,blight\IMG_0983.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blight\IMG_0983.jpg,val
+BLI036,IMG_0998.jpg,blight,2,blight\IMG_0998.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blight\IMG_0998.jpg,val
+BLI040,IMG_1003.jpg,blight,2,blight\IMG_1003.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blight\IMG_1003.jpg,val
+BLI043,IMG_1009.jpg,blight,2,blight\IMG_1009.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blight\IMG_1009.jpg,val
+BLI068,IMG_1055.jpg,blight,2,blight\IMG_1055.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blight\IMG_1055.jpg,val
+BLI077,IMG_1069.jpg,blight,2,blight\IMG_1069.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\blight\IMG_1069.jpg,val
+TUN021,IMG_0832.jpg,tungro,3,tungro\IMG_0832.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\tungro\IMG_0832.jpg,val
+TUN022,IMG_0833.jpg,tungro,3,tungro\IMG_0833.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\tungro\IMG_0833.jpg,val
+TUN025,IMG_0845.jpg,tungro,3,tungro\IMG_0845.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\tungro\IMG_0845.jpg,val
+TUN031,IMG_0851.jpg,tungro,3,tungro\IMG_0851.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\tungro\IMG_0851.jpg,val
+TUN047,IMG_0872.jpg,tungro,3,tungro\IMG_0872.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\tungro\IMG_0872.jpg,val
+TUN060,IMG_0890.jpg,tungro,3,tungro\IMG_0890.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\tungro\IMG_0890.jpg,val
+TUN063,IMG_0896.jpg,tungro,3,tungro\IMG_0896.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\tungro\IMG_0896.jpg,val
+TUN068,IMG_0901.jpg,tungro,3,tungro\IMG_0901.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\tungro\IMG_0901.jpg,val
+TUN070,IMG_0903.jpg,tungro,3,tungro\IMG_0903.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\tungro\IMG_0903.jpg,val
+TUN071,IMG_0904.jpg,tungro,3,tungro\IMG_0904.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\tungro\IMG_0904.jpg,val
+TUN076,IMG_0913.jpg,tungro,3,tungro\IMG_0913.jpg,C:\ML\bigdata\Penyakit_Daun_Padi_Indonesia\tungro\IMG_0913.jpg,val

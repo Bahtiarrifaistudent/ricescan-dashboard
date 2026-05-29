@@ -1,0 +1,40 @@
+{
+  "pipeline_run": "2026-04-12T13:26:50.692287",
+  "dataset_version": "v4.1",
+  "dataset_dir": "./Penyakit_Daun_Padi_Indonesia",
+  "dataset_dir_exists": true,
+  "wilayah_survei": "Kabupaten Indramayu",
+  "periode_survei": "April 2026",
+  "total_records": 319,
+  "total_features": 31,
+  "n_kelas": 4,
+  "kelas": [
+    "sehat",
+    "blast",
+    "blight",
+    "tungro"
+  ],
+  "model": "CNN – Conv2D(32-64-128) + Dense(256) + Softmax(4)",
+  "img_size": [
+    224,
+    224
+  ],
+  "preprocessing_citra": [
+    "Resize 224×224",
+    "Binerisasi (Otsu)",
+    "Prescale /255",
+    "Augmentasi"
+  ],
+  "disease_distribution": {
+    "blast": 80,
+    "blight": 80,
+    "tungro": 80,
+    "sehat": 79
+  },
+  "split_distribution": {
+    "train": 248,
+    "val": 36,
+    "test": 35
+  },
+  "missing_values": 0
+}

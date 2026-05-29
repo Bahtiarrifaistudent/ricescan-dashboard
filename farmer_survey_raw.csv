@@ -1,0 +1,151 @@
+survey_id,nama_responden,no_hp,kecamatan,kabupaten,kondisi_lahan,luas_lahan_ha,persentase_serangan,estimasi_kerugian_pct,penggunaan_fungisida,varietas_padi,musim_tanam,durasi_gejala_hari,jarak_ke_PPL_km,tingkat_kesadaran,metode_deteksi,frekuensi_monitoring,akses_informasi,skor_kepuasan_petani,tanggal_survei
+SRV-001,Tarman Suhendi,085712345601,Indramayu,Indramayu,blast,1.5,65,47,Ya,Ciherang,Gadu,12,3.2,Sedang,Visual,Mingguan,PPL,3,2026-04-01
+SRV-002,Suryadi Kartawidjaja,085712345602,Lohbener,Indramayu,blight,2.0,45,28,Tidak,IR64,Rendeng,8,6.1,Rendah,Visual,Bulanan,Tetangga,2,2026-04-01
+SRV-003,Hasan Basri,085712345603,Kandanghaur,Indramayu,tungro,0.75,80,72,Ya,Inpari13,Gadu,15,8.5,Tinggi,Foto,Mingguan,PPL,4,2026-04-01
+SRV-004,Warsono Hadikusuma,085712345604,Sukra,Indramayu,sehat,1.25,0,0,Ya,Mekongga,Rendeng,0,5.3,Sedang,Visual,Mingguan,Radio,4,2026-04-01
+SRV-005,Nana Suryana,085712345605,Patrol,Indramayu,tungro,3.0,90,85,Tidak,Ciherang,Gadu,20,12.4,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-01
+SRV-006,Sarip Hidayat,085712345606,Anjatan,Indramayu,blight,0.5,35,22,Ya,IR64,Rendeng,6,4.7,Tinggi,Foto,Mingguan,HP/Internet,5,2026-04-01
+SRV-007,Dede Kusnadi,085712345607,Bongas,Indramayu,blast,1.75,70,52,Ya,Inpari13,Gadu,14,7.8,Sedang,Visual,Mingguan,PPL,3,2026-04-02
+SRV-008,Maman Suherman,085712345608,Haurgeulis,Indramayu,tungro,2.5,85,78,Tidak,Ciherang,Gadu,18,15.2,Rendah,Visual,Tidak Rutin,Sendiri,2,2026-04-02
+SRV-009,Yayan Sopyan,085712345609,Gantar,Indramayu,sehat,1.0,0,0,Ya,Mekongga,Rendeng,0,9.3,Tinggi,Foto,Mingguan,PPL,5,2026-04-02
+SRV-010,Aceng Rohmat,085712345610,Terisi,Indramayu,blast,0.8,60,45,Ya,IR64,Gadu,11,6.6,Sedang,Visual,Mingguan,Radio,3,2026-04-02
+SRV-011,Ujang Saepudin,085712345611,Lelea,Indramayu,tungro,1.5,75,68,Tidak,Ciherang,Gadu,16,10.1,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-02
+SRV-012,Rohim Nurdin,085712345612,Widasari,Indramayu,blast,2.25,50,38,Ya,Inpari13,Rendeng,9,4.4,Sedang,Foto,Mingguan,HP/Internet,4,2026-04-02
+SRV-013,Kardi Sunarya,085712345613,Kertasemaya,Indramayu,sehat,0.75,0,0,Ya,Ciherang,Rendeng,0,3.8,Tinggi,Foto,Mingguan,PPL,5,2026-04-03
+SRV-014,Entang Sukmana,085712345614,Sukagumiwang,Indramayu,tungro,1.0,88,82,Tidak,IR64,Gadu,19,11.7,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-03
+SRV-015,Sanusi Abdulah,085712345615,Tukdana,Indramayu,blast,1.5,62,46,Ya,Mekongga,Gadu,12,7.2,Sedang,Visual,Mingguan,PPL,3,2026-04-03
+SRV-016,Warman Sudrajat,085712345616,Bangodua,Indramayu,blight,2.0,42,26,Ya,Ciherang,Rendeng,7,5.9,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-03
+SRV-017,Teten Suparman,085712345617,Cikedung,Indramayu,tungro,0.5,78,71,Tidak,IR64,Gadu,17,13.5,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-03
+SRV-018,Oman Suhendi,085712345618,Kroya,Indramayu,blast,1.25,58,43,Ya,Inpari13,Gadu,11,8.3,Sedang,Visual,Mingguan,Radio,3,2026-04-04
+SRV-019,Uman Nurhakim,085712345619,Gabuswetan,Indramayu,blight,1.75,38,23,Ya,Ciherang,Rendeng,6,6.4,Tinggi,Foto,Mingguan,PPL,5,2026-04-04
+SRV-020,Rudi Hartono,085712345620,Cantigi,Indramayu,sehat,1.0,0,0,Tidak,IR64,Gadu,0,16.8,Rendah,Visual,Tidak Rutin,Sendiri,3,2026-04-04
+SRV-021,Dadan Mulyana,085712345621,Pasekan,Indramayu,blast,0.75,68,50,Ya,Mekongga,Gadu,13,4.1,Sedang,Visual,Mingguan,PPL,3,2026-04-04
+SRV-022,Neng Tuti Rahayu,085712345622,Losarang,Indramayu,blight,1.0,44,27,Ya,Ciherang,Rendeng,8,7.6,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-04
+SRV-023,Sukron Makmun,085712345623,Sindang,Indramayu,tungro,2.0,83,76,Tidak,IR64,Gadu,18,14.3,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-05
+SRV-024,Wahyu Setiawan,085712345624,Arahan,Indramayu,blast,1.5,55,40,Ya,Inpari13,Gadu,10,5.7,Sedang,Visual,Mingguan,Radio,3,2026-04-05
+SRV-025,Asep Hidayat,085712345625,Karangampel,Indramayu,sehat,0.5,0,0,Ya,Ciherang,Rendeng,0,3.5,Tinggi,Foto,Mingguan,PPL,5,2026-04-05
+SRV-026,Yusuf Gunawan,085712345626,Kedokanbunder,Indramayu,tungro,1.0,86,80,Tidak,IR64,Gadu,20,12.9,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-05
+SRV-027,Tatang Sujana,085712345627,Juntinyuat,Indramayu,blast,2.5,72,54,Ya,Mekongga,Gadu,14,9.1,Sedang,Visual,Mingguan,PPL,3,2026-04-05
+SRV-028,Yudi Permana,085712345628,Sliyeg,Indramayu,blight,1.75,46,29,Ya,Ciherang,Rendeng,7,6.8,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-06
+SRV-029,Cece Supriatna,085712345629,Jatibarang,Indramayu,tungro,0.75,79,73,Tidak,IR64,Gadu,17,11.4,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-06
+SRV-030,Saepudin Kasim,085712345630,Balongan,Indramayu,blast,1.0,60,44,Ya,Inpari13,Gadu,12,7.9,Sedang,Visual,Mingguan,Radio,3,2026-04-06
+SRV-031,Hendra Gunawan,085712345631,Indramayu,Indramayu,blight,2.0,36,21,Ya,Ciherang,Rendeng,6,4.2,Tinggi,Foto,Mingguan,PPL,5,2026-04-06
+SRV-032,Iim Sopian,085712345632,Lohbener,Indramayu,sehat,1.25,0,0,Tidak,IR64,Gadu,0,13.6,Rendah,Visual,Tidak Rutin,Sendiri,3,2026-04-06
+SRV-033,Daris Firmansyah,085712345633,Kandanghaur,Indramayu,blast,0.5,57,42,Ya,Mekongga,Gadu,11,8.7,Sedang,Visual,Mingguan,PPL,3,2026-04-07
+SRV-034,Komarudin Wahab,085712345634,Sukra,Indramayu,blight,1.5,43,26,Ya,Ciherang,Rendeng,7,6.0,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-07
+SRV-035,Mamat Mulyana,085712345635,Patrol,Indramayu,tungro,3.0,91,87,Tidak,IR64,Gadu,21,17.2,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-07
+SRV-036,Nana Rusmana,085712345636,Anjatan,Indramayu,blast,1.75,66,49,Ya,Inpari13,Gadu,13,7.4,Sedang,Visual,Mingguan,Radio,3,2026-04-07
+SRV-037,Suratman Kohar,085712345637,Bongas,Indramayu,blight,0.75,39,24,Ya,Ciherang,Rendeng,6,5.2,Tinggi,Foto,Mingguan,PPL,5,2026-04-07
+SRV-038,Usman Effendy,085712345638,Haurgeulis,Indramayu,sehat,2.0,0,0,Tidak,IR64,Gadu,0,14.8,Rendah,Visual,Tidak Rutin,Sendiri,3,2026-04-08
+SRV-039,Wahid Hasyim,085712345639,Gantar,Indramayu,blast,1.25,61,45,Ya,Mekongga,Gadu,12,9.5,Sedang,Visual,Mingguan,PPL,3,2026-04-08
+SRV-040,Zaenal Arifin,085712345640,Terisi,Indramayu,blight,1.0,41,25,Ya,Ciherang,Rendeng,7,6.3,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-08
+SRV-041,Asep Saepudin,085712345641,Lelea,Indramayu,tungro,0.5,76,70,Tidak,IR64,Gadu,16,10.6,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-08
+SRV-042,Burhanudin Said,085712345642,Widasari,Indramayu,blast,2.25,53,39,Ya,Inpari13,Gadu,10,7.1,Sedang,Visual,Mingguan,Radio,3,2026-04-08
+SRV-043,Cecep Suryadi,085712345643,Kertasemaya,Indramayu,sehat,1.5,0,0,Ya,Ciherang,Rendeng,0,5.8,Tinggi,Foto,Mingguan,PPL,5,2026-04-09
+SRV-044,Dudi Sukmana,085712345644,Sukagumiwang,Indramayu,tungro,1.75,89,84,Tidak,IR64,Gadu,20,13.2,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-09
+SRV-045,Encep Muslih,085712345645,Tukdana,Indramayu,blast,0.75,64,47,Ya,Mekongga,Gadu,13,8.4,Sedang,Visual,Mingguan,PPL,3,2026-04-09
+SRV-046,Firman Nugraha,085712345646,Bangodua,Indramayu,blight,2.0,40,24,Ya,Ciherang,Rendeng,7,6.5,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-09
+SRV-047,Gani Permana,085712345647,Cikedung,Indramayu,tungro,1.0,82,75,Tidak,IR64,Gadu,17,11.9,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-09
+SRV-048,Hadi Sucipto,085712345648,Kroya,Indramayu,blast,1.5,59,43,Ya,Inpari13,Gadu,11,8.0,Sedang,Visual,Mingguan,Radio,3,2026-04-10
+SRV-049,Irwan Sanjaya,085712345649,Gabuswetan,Indramayu,sehat,0.5,0,0,Ya,Ciherang,Rendeng,0,4.9,Tinggi,Foto,Mingguan,PPL,5,2026-04-10
+SRV-050,Jajang Hernawan,085712345650,Cantigi,Indramayu,tungro,2.5,93,89,Tidak,IR64,Gadu,22,18.1,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-10
+SRV-051,Karsum Najib,085712345651,Pasekan,Indramayu,blast,1.25,67,50,Ya,Mekongga,Gadu,13,5.6,Sedang,Visual,Mingguan,PPL,3,2026-04-10
+SRV-052,Luki Budiman,085712345652,Losarang,Indramayu,blight,1.75,43,27,Ya,Ciherang,Rendeng,8,7.3,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-10
+SRV-053,Mujahid Ramdan,085712345653,Sindang,Indramayu,tungro,0.75,77,71,Tidak,IR64,Gadu,16,10.2,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-11
+SRV-054,Nandi Sutisna,085712345654,Arahan,Indramayu,blast,2.0,52,38,Ya,Inpari13,Gadu,10,8.8,Sedang,Visual,Mingguan,Radio,3,2026-04-11
+SRV-055,Opik Rohman,085712345655,Karangampel,Indramayu,sehat,1.0,0,0,Ya,Ciherang,Rendeng,0,6.1,Tinggi,Foto,Mingguan,PPL,5,2026-04-11
+SRV-056,Parman Suharto,085712345656,Kedokanbunder,Indramayu,tungro,1.5,85,79,Tidak,IR64,Gadu,19,14.5,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-11
+SRV-057,Qadir Wahyudin,085712345657,Juntinyuat,Indramayu,blast,0.5,63,46,Ya,Mekongga,Gadu,12,7.7,Sedang,Visual,Mingguan,PPL,3,2026-04-11
+SRV-058,Rahmat Fauzi,085712345658,Sliyeg,Indramayu,blight,2.25,44,28,Ya,Ciherang,Rendeng,7,5.4,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-12
+SRV-059,Saiful Anwar,085712345659,Jatibarang,Indramayu,tungro,1.75,80,74,Tidak,IR64,Gadu,17,12.3,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-12
+SRV-060,Tajudin Maulana,085712345660,Balongan,Indramayu,blast,1.25,58,43,Ya,Inpari13,Gadu,11,9.2,Sedang,Visual,Mingguan,Radio,3,2026-04-12
+SRV-061,Udin Sarifudin,085712345661,Indramayu,Indramayu,blight,0.75,38,23,Ya,Ciherang,Rendeng,6,4.8,Tinggi,Foto,Mingguan,PPL,5,2026-04-12
+SRV-062,Veri Hamdani,085712345662,Lohbener,Indramayu,sehat,2.0,0,0,Tidak,IR64,Gadu,0,15.7,Rendah,Visual,Tidak Rutin,Sendiri,3,2026-04-12
+SRV-063,Wawan Kurniawan,085712345663,Kandanghaur,Indramayu,blast,1.5,69,51,Ya,Mekongga,Gadu,13,8.1,Sedang,Visual,Mingguan,PPL,3,2026-04-13
+SRV-064,Xendi Pratama,085712345664,Sukra,Indramayu,blight,1.0,42,26,Ya,Ciherang,Rendeng,7,6.7,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-13
+SRV-065,Yandi Kusuma,085712345665,Patrol,Indramayu,tungro,0.5,81,75,Tidak,IR64,Gadu,17,11.1,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-13
+SRV-066,Zulkifli Hasan,085712345666,Anjatan,Indramayu,blast,2.5,54,40,Ya,Inpari13,Gadu,10,7.6,Sedang,Visual,Mingguan,Radio,3,2026-04-13
+SRV-067,Ade Suryana,085712345667,Bongas,Indramayu,sehat,1.75,0,0,Ya,Ciherang,Rendeng,0,5.1,Tinggi,Foto,Mingguan,PPL,5,2026-04-13
+SRV-068,Beni Setiawan,085712345668,Haurgeulis,Indramayu,tungro,1.25,88,83,Tidak,IR64,Gadu,21,16.4,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-14
+SRV-069,Candra Oktavian,085712345669,Gantar,Indramayu,blast,0.75,65,48,Ya,Mekongga,Gadu,12,9.8,Sedang,Visual,Mingguan,PPL,3,2026-04-14
+SRV-070,Dani Firmansyah,085712345670,Terisi,Indramayu,blight,2.0,45,28,Ya,Ciherang,Rendeng,7,6.2,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-14
+SRV-071,Eka Saputra,085712345671,Lelea,Indramayu,tungro,1.5,79,73,Tidak,IR64,Gadu,16,10.9,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-14
+SRV-072,Farid Mustofa,085712345672,Widasari,Indramayu,blast,1.0,61,45,Ya,Inpari13,Gadu,12,7.3,Sedang,Visual,Mingguan,Radio,3,2026-04-14
+SRV-073,Gilang Ramadhan,085712345673,Kertasemaya,Indramayu,sehat,0.5,0,0,Ya,Ciherang,Rendeng,0,5.5,Tinggi,Foto,Mingguan,PPL,5,2026-04-15
+SRV-074,Hilman Nurhidayat,085712345674,Sukagumiwang,Indramayu,tungro,2.25,90,85,Tidak,IR64,Gadu,20,14.0,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-15
+SRV-075,Ivan Prasetyo,085712345675,Tukdana,Indramayu,blast,1.75,63,46,Ya,Mekongga,Gadu,12,8.6,Sedang,Visual,Mingguan,PPL,3,2026-04-15
+SRV-076,Johan Susanto,085712345676,Bangodua,Indramayu,blight,1.25,40,25,Ya,Ciherang,Rendeng,7,5.3,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-15
+SRV-077,Kurnia Putra,085712345677,Cikedung,Indramayu,tungro,0.75,83,77,Tidak,IR64,Gadu,18,12.7,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-15
+SRV-078,Lukman Hakim,085712345678,Kroya,Indramayu,blast,2.0,57,42,Ya,Inpari13,Gadu,11,7.8,Sedang,Visual,Mingguan,Radio,3,2026-04-16
+SRV-079,Moch Rizki,085712345679,Gabuswetan,Indramayu,blight,1.5,39,24,Ya,Ciherang,Rendeng,6,6.6,Tinggi,Foto,Mingguan,PPL,5,2026-04-16
+SRV-080,Nanang Suhendar,085712345680,Cantigi,Indramayu,sehat,1.0,0,0,Tidak,IR64,Gadu,0,13.8,Rendah,Visual,Tidak Rutin,Sendiri,3,2026-04-16
+SRV-081,Oscar Pratama,085712345681,Pasekan,Indramayu,blast,0.5,66,49,Ya,Mekongga,Gadu,13,9.4,Sedang,Visual,Mingguan,PPL,3,2026-04-16
+SRV-082,Pandu Wijaya,085712345682,Losarang,Indramayu,blight,2.5,43,27,Ya,Ciherang,Rendeng,7,5.7,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-16
+SRV-083,Qori Hamdani,085712345683,Sindang,Indramayu,tungro,1.75,87,82,Tidak,IR64,Gadu,20,14.2,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-17
+SRV-084,Rizal Maulana,085712345684,Arahan,Indramayu,blast,1.25,60,44,Ya,Inpari13,Gadu,11,8.3,Sedang,Visual,Mingguan,Radio,3,2026-04-17
+SRV-085,Sigit Purnomo,085712345685,Karangampel,Indramayu,blight,0.75,37,23,Ya,Ciherang,Rendeng,6,6.4,Tinggi,Foto,Mingguan,PPL,5,2026-04-17
+SRV-086,Teguh Santoso,085712345686,Kedokanbunder,Indramayu,tungro,2.0,82,76,Tidak,IR64,Gadu,17,11.6,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-17
+SRV-087,Ujang Hermawan,085712345687,Juntinyuat,Indramayu,blast,1.5,62,46,Ya,Mekongga,Gadu,12,7.9,Sedang,Visual,Mingguan,PPL,3,2026-04-17
+SRV-088,Vino Akbar,085712345688,Sliyeg,Indramayu,sehat,1.0,0,0,Ya,Ciherang,Rendeng,0,5.0,Tinggi,Foto,Mingguan,HP/Internet,5,2026-04-18
+SRV-089,Wahyudi Prayitno,085712345689,Jatibarang,Indramayu,tungro,0.5,80,74,Tidak,IR64,Gadu,17,12.0,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-18
+SRV-090,Xaverius Nugraha,085712345690,Balongan,Indramayu,blast,2.25,56,41,Ya,Inpari13,Gadu,11,8.5,Sedang,Visual,Mingguan,Radio,3,2026-04-18
+SRV-091,Yopi Sulaeman,085712345691,Indramayu,Indramayu,blight,1.75,38,23,Ya,Ciherang,Rendeng,6,4.6,Tinggi,Foto,Mingguan,PPL,5,2026-04-18
+SRV-092,Zaenal Mutaqin,085712345692,Lohbener,Indramayu,tungro,1.25,85,79,Tidak,IR64,Gadu,19,13.3,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-18
+SRV-093,Agus Salim,085712345693,Kandanghaur,Indramayu,blast,0.75,64,47,Ya,Mekongga,Gadu,12,9.0,Sedang,Visual,Mingguan,PPL,3,2026-04-19
+SRV-094,Bambang Irawan,085712345694,Sukra,Indramayu,sehat,2.0,0,0,Ya,Ciherang,Rendeng,0,6.1,Tinggi,Foto,Mingguan,HP/Internet,5,2026-04-19
+SRV-095,Cecep Rukmana,085712345695,Patrol,Indramayu,tungro,1.5,83,77,Tidak,IR64,Gadu,18,14.7,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-19
+SRV-096,Dadang Sujana,085712345696,Anjatan,Indramayu,blast,1.0,59,43,Ya,Inpari13,Gadu,11,7.5,Sedang,Visual,Mingguan,Radio,3,2026-04-19
+SRV-097,Endang Sudrajat,085712345697,Bongas,Indramayu,blight,0.5,35,21,Ya,Ciherang,Rendeng,5,5.8,Tinggi,Foto,Mingguan,PPL,5,2026-04-19
+SRV-098,Fauzan Mukhlis,085712345698,Haurgeulis,Indramayu,tungro,2.5,89,84,Tidak,IR64,Gadu,21,16.1,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-20
+SRV-099,Galih Prasetyo,085712345699,Gantar,Indramayu,sehat,1.75,0,0,Ya,Mekongga,Gadu,0,9.7,Sedang,Visual,Mingguan,PPL,4,2026-04-20
+SRV-100,Hendi Wijaya,085712345700,Terisi,Indramayu,blight,1.25,40,25,Ya,Ciherang,Rendeng,7,6.3,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-20
+SRV-101,Irfan Maulana,085712345701,Lelea,Indramayu,tungro,0.75,78,72,Tidak,IR64,Gadu,16,10.4,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-20
+SRV-102,Joko Pramono,085712345702,Widasari,Indramayu,blast,2.0,55,40,Ya,Inpari13,Gadu,10,7.2,Sedang,Visual,Mingguan,Radio,3,2026-04-20
+SRV-103,Krisna Handoko,085712345703,Kertasemaya,Indramayu,blight,1.5,36,22,Ya,Ciherang,Rendeng,6,5.6,Tinggi,Foto,Mingguan,PPL,5,2026-04-21
+SRV-104,Lendra Kusuma,085712345704,Sukagumiwang,Indramayu,sehat,1.0,0,0,Tidak,IR64,Gadu,0,13.0,Rendah,Visual,Tidak Rutin,Sendiri,3,2026-04-21
+SRV-105,Muhamad Fauzi,085712345705,Tukdana,Indramayu,blast,0.5,62,46,Ya,Mekongga,Gadu,12,8.1,Sedang,Visual,Mingguan,PPL,3,2026-04-21
+SRV-106,Nizar Habibi,085712345706,Bangodua,Indramayu,blight,2.25,43,27,Ya,Ciherang,Rendeng,7,6.0,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-21
+SRV-107,Oki Susanto,085712345707,Cikedung,Indramayu,tungro,1.75,81,75,Tidak,IR64,Gadu,17,12.5,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-21
+SRV-108,Putra Ramadhan,085712345708,Kroya,Indramayu,blast,1.25,58,43,Ya,Inpari13,Gadu,11,7.6,Sedang,Visual,Mingguan,Radio,3,2026-04-22
+SRV-109,Qusyairi Ahmad,085712345709,Gabuswetan,Indramayu,sehat,0.75,0,0,Ya,Ciherang,Rendeng,0,5.2,Tinggi,Foto,Mingguan,PPL,5,2026-04-22
+SRV-110,Rizky Pratama,085712345710,Cantigi,Indramayu,tungro,2.0,88,83,Tidak,IR64,Gadu,21,15.9,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-22
+SRV-111,Sandi Putra,085712345711,Pasekan,Indramayu,blast,1.5,64,47,Ya,Mekongga,Gadu,12,9.3,Sedang,Visual,Mingguan,PPL,3,2026-04-22
+SRV-112,Tommy Sitorus,085712345712,Losarang,Indramayu,blight,1.0,41,26,Ya,Ciherang,Rendeng,7,6.8,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-22
+SRV-113,Ucok Sitompul,085712345713,Sindang,Indramayu,tungro,0.5,79,73,Tidak,IR64,Gadu,16,11.3,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-23
+SRV-114,Vandra Pratama,085712345714,Arahan,Indramayu,blast,2.5,57,42,Ya,Inpari13,Gadu,11,7.4,Sedang,Visual,Mingguan,Radio,3,2026-04-23
+SRV-115,Wahid Nugroho,085712345715,Karangampel,Indramayu,sehat,1.75,0,0,Ya,Ciherang,Rendeng,0,5.9,Tinggi,Foto,Mingguan,PPL,5,2026-04-23
+SRV-116,Xander Taufik,085712345716,Kedokanbunder,Indramayu,tungro,1.25,84,78,Tidak,IR64,Gadu,18,13.5,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-23
+SRV-117,Yasser Arafat,085712345717,Juntinyuat,Indramayu,blast,0.75,66,49,Ya,Mekongga,Gadu,13,8.9,Sedang,Visual,Mingguan,PPL,3,2026-04-23
+SRV-118,Zahroni Fadli,085712345718,Sliyeg,Indramayu,blight,2.0,42,26,Ya,Ciherang,Rendeng,7,5.5,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-24
+SRV-119,Alim Syarif,085712345719,Jatibarang,Indramayu,tungro,1.5,82,76,Tidak,IR64,Gadu,17,12.1,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-24
+SRV-120,Bram Nugroho,085712345720,Balongan,Indramayu,blast,1.0,60,44,Ya,Inpari13,Gadu,12,8.0,Sedang,Visual,Mingguan,Radio,3,2026-04-24
+SRV-121,Calon Ridwan,085712345721,Indramayu,Indramayu,sehat,0.5,0,0,Ya,Ciherang,Rendeng,0,5.1,Tinggi,Foto,Mingguan,PPL,5,2026-04-24
+SRV-122,Didin Wahyudin,085712345722,Lohbener,Indramayu,tungro,2.25,90,85,Tidak,IR64,Gadu,22,17.6,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-24
+SRV-123,Edy Kurniawan,085712345723,Kandanghaur,Indramayu,blast,1.75,63,46,Ya,Mekongga,Gadu,12,9.1,Sedang,Visual,Mingguan,PPL,3,2026-04-25
+SRV-124,Fahmi Abdillah,085712345724,Sukra,Indramayu,blight,1.25,43,27,Ya,Ciherang,Rendeng,7,6.6,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-25
+SRV-125,Ganda Setiawan,085712345725,Patrol,Indramayu,tungro,0.75,83,77,Tidak,IR64,Gadu,18,13.0,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-25
+SRV-126,Hasanuddin Malik,085712345726,Anjatan,Indramayu,blast,2.0,56,41,Ya,Inpari13,Gadu,11,7.7,Sedang,Visual,Mingguan,Radio,3,2026-04-25
+SRV-127,Ical Fernanda,085712345727,Bongas,Indramayu,sehat,1.5,0,0,Ya,Ciherang,Rendeng,0,5.3,Tinggi,Foto,Mingguan,PPL,5,2026-04-25
+SRV-128,Jamal Udin,085712345728,Haurgeulis,Indramayu,tungro,1.0,86,81,Tidak,IR64,Gadu,20,14.4,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-26
+SRV-129,Kemal Syarif,085712345729,Gantar,Indramayu,blast,0.5,65,48,Ya,Mekongga,Gadu,12,9.6,Sedang,Visual,Mingguan,PPL,3,2026-04-26
+SRV-130,Latif Hamdani,085712345730,Terisi,Indramayu,blight,2.5,41,25,Ya,Ciherang,Rendeng,7,6.4,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-26
+SRV-131,Mahfud Sidiq,085712345731,Lelea,Indramayu,tungro,1.75,80,74,Tidak,IR64,Gadu,17,11.7,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-26
+SRV-132,Nanda Putrawan,085712345732,Widasari,Indramayu,sehat,1.25,0,0,Ya,Inpari13,Gadu,0,7.0,Sedang,Visual,Mingguan,Radio,4,2026-04-26
+SRV-133,Oman Sahroni,085712345733,Kertasemaya,Indramayu,blight,0.75,36,22,Ya,Ciherang,Rendeng,6,5.7,Tinggi,Foto,Mingguan,PPL,5,2026-04-27
+SRV-134,Panji Asmoro,085712345734,Sukagumiwang,Indramayu,tungro,2.0,87,82,Tidak,IR64,Gadu,20,13.7,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-27
+SRV-135,Qodir Yasin,085712345735,Tukdana,Indramayu,blast,1.5,58,43,Ya,Mekongga,Gadu,11,8.2,Sedang,Visual,Mingguan,PPL,3,2026-04-27
+SRV-136,Reza Fathoni,085712345736,Bangodua,Indramayu,blight,1.0,38,23,Ya,Ciherang,Rendeng,6,6.0,Tinggi,Foto,Mingguan,HP/Internet,4,2026-04-27
+SRV-137,Samsul Bahri,085712345737,Cikedung,Indramayu,sehat,0.5,0,0,Tidak,IR64,Gadu,0,12.2,Rendah,Visual,Tidak Rutin,Tetangga,3,2026-04-27
+SRV-138,Taufik Hidayat,085712345738,Kroya,Indramayu,blast,2.25,64,47,Ya,Inpari13,Gadu,13,9.0,Sedang,Visual,Mingguan,Radio,3,2026-04-28
+SRV-139,Uki Pradana,085712345739,Gabuswetan,Indramayu,blight,1.75,40,25,Ya,Ciherang,Rendeng,7,5.4,Tinggi,Foto,Mingguan,PPL,5,2026-04-28
+SRV-140,Vidi Pradana,085712345740,Cantigi,Indramayu,tungro,1.25,85,79,Tidak,IR64,Gadu,19,14.0,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-28
+SRV-141,Wuri Handayani,085712345741,Pasekan,Indramayu,blast,0.75,63,46,Ya,Mekongga,Gadu,12,8.7,Sedang,Visual,Mingguan,PPL,3,2026-04-28
+SRV-142,Xeni Purnama,085712345742,Losarang,Indramayu,sehat,2.0,0,0,Ya,Ciherang,Rendeng,0,5.8,Tinggi,Foto,Mingguan,HP/Internet,5,2026-04-28
+SRV-143,Yeni Rahayu,085712345743,Sindang,Indramayu,tungro,1.5,83,77,Tidak,IR64,Gadu,18,12.8,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-29
+SRV-144,Zainal Abidin,085712345744,Arahan,Indramayu,blast,1.0,59,43,Ya,Inpari13,Gadu,11,7.8,Sedang,Visual,Mingguan,Radio,3,2026-04-29
+SRV-145,Andika Pratama,085712345745,Karangampel,Indramayu,blight,0.5,34,21,Ya,Ciherang,Rendeng,5,5.3,Tinggi,Foto,Mingguan,PPL,5,2026-04-29
+SRV-146,Bagas Saputra,085712345746,Kedokanbunder,Indramayu,tungro,2.5,88,83,Tidak,IR64,Gadu,21,16.3,Rendah,Visual,Tidak Rutin,Sendiri,1,2026-04-29
+SRV-147,Ciko Santosa,085712345747,Juntinyuat,Indramayu,blast,1.75,67,50,Ya,Mekongga,Gadu,13,9.5,Sedang,Visual,Mingguan,PPL,3,2026-04-29
+SRV-148,Dimas Nugroho,085712345748,Sliyeg,Indramayu,sehat,1.25,0,0,Ya,Ciherang,Rendeng,0,5.6,Tinggi,Foto,Mingguan,HP/Internet,5,2026-04-30
+SRV-149,Eko Purwanto,085712345749,Jatibarang,Indramayu,tungro,0.75,82,76,Tidak,IR64,Gadu,17,12.4,Rendah,Visual,Tidak Rutin,Tetangga,2,2026-04-30
+SRV-150,Feri Setiawan,085712345750,Balongan,Indramayu,blast,2.0,60,44,Ya,Inpari13,Gadu,12,8.3,Sedang,Visual,Mingguan,Radio,3,2026-04-30
