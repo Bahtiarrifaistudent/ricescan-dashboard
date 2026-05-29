@@ -171,10 +171,137 @@ KECAMATAN_LIST = [
 
 CLS_COLOR = {"sehat":"#3fb950","blast":"#f85149","blight":"#d29922","tungro":"#bc8cff"}
 REKOM = {
-    "sehat":  "Daun padi sehat. Lanjutkan pemantauan rutin setiap 7 hari.",
-    "blast":  "Blas Daun (Magnaporthe oryzae). Semprot Tricyclazole/Isoprothiolane. Kurangi pupuk N.",
-    "blight": "Hawar Daun Bakteri (Xanthomonas oryzae). Gunakan varietas tahan Inpari13. Perbaiki drainase.",
-    "tungro": "Tungro (RTBV) — tidak ada obat. Cabut & bakar tanaman. Kendalikan wereng hijau (vektor).",
+    "sehat":  "Daun padi dalam kondisi sehat. Lanjutkan pemantauan rutin setiap 7 hari.",
+    "blast":  "Terdeteksi Blas Daun (Magnaporthe oryzae). Segera lakukan pengendalian kimiawi dan budidaya.",
+    "blight": "Terdeteksi Hawar Daun Bakteri (Xanthomonas oryzae). Lakukan pengendalian terpadu segera.",
+    "tungro": "PERINGATAN: Terdeteksi Tungro (RTBV). Tidak ada obat — tindakan cepat sangat diperlukan.",
+}
+
+# Saran penanganan lengkap per penyakit
+PENANGANAN = {
+    "sehat": {
+        "status": "Aman",
+        "warna": "#2e7d32",
+        "ringkasan": "Tanaman dalam kondisi optimal. Tidak ada tindakan darurat diperlukan.",
+        "langkah": [
+            ("Pemantauan Rutin", "#2e7d32", [
+                "Periksa daun padi setiap 7 hari sekali",
+                "Amati perubahan warna, bercak, atau kerusakan fisik",
+                "Catat jumlah anakan per rumpun sebagai indikator pertumbuhan",
+            ]),
+            ("Pemupukan & Irigasi", "#1565C0", [
+                "Lanjutkan pemupukan sesuai jadwal: N-P-K seimbang",
+                "Jaga tinggi air 3-5 cm di fase vegetatif",
+                "Hindari kelebihan pupuk Nitrogen yang memperlemah ketahanan tanaman",
+            ]),
+            ("Pencegahan Dini", "#e65100", [
+                "Pasang lampu perangkap wereng di sekitar sawah",
+                "Bersihkan gulma di pematang sebagai tempat persembunyian hama",
+                "Koordinasi dengan petani sekitar untuk monitoring bersama",
+            ]),
+        ],
+        "produk": [],
+        "waktu_tindak": "Tidak ada tindakan darurat — pemantauan rutin 7 hari",
+    },
+    "blast": {
+        "status": "Berbahaya",
+        "warna": "#c62828",
+        "ringkasan": "Blas Daun disebabkan jamur Magnaporthe oryzae. Bercak berbentuk belah ketupat dengan tepi coklat dan titik abu di tengah. Menyebar cepat saat kelembaban >80% dan suhu 24–28°C.",
+        "langkah": [
+            ("Tindakan Darurat (0–3 Hari)", "#c62828", [
+                "Semprot fungisida sistemik secepatnya ke seluruh area yang terinfeksi",
+                "Gunakan Tricyclazole 75WP dosis 0,5 g/L atau Isoprothiolane 50EC dosis 1-1,5 ml/L",
+                "Semprotkan pada pagi hari (06.00–09.00) saat angin tenang",
+                "Ulangi penyemprotan 7–10 hari kemudian jika gejala masih ada",
+            ]),
+            ("Pengelolaan Budidaya", "#e65100", [
+                "Kurangi dosis pupuk Nitrogen maksimal 50% dari rencana awal",
+                "Jaga jarak tanam minimal 25x25 cm untuk sirkulasi udara",
+                "Hindari penggenangan air berlebihan — jaga level air 2–3 cm",
+                "Panen lebih awal jika infeksi sudah mencapai malai (blast leher)",
+            ]),
+            ("Pencegahan Penyebaran", "#1565C0", [
+                "Isolasi area terinfeksi — jangan bawa alat dari lahan terinfeksi",
+                "Bakar atau kubur jerami sisa panen yang terinfeksi",
+                "Laporan ke PPL (Penyuluh Pertanian Lapangan) setempat",
+                "Gunakan benih berlabel SNI untuk musim tanam berikutnya",
+            ]),
+        ],
+        "produk": [
+            ("Tricyclazole 75WP", "0,5 g/L air", "Fungisida sistemik — kuratif & preventif"),
+            ("Isoprothiolane 50EC", "1–1,5 ml/L air", "Fungisida sistemik — efektif untuk blas"),
+            ("Azoxystrobin", "0,5 ml/L air", "Fungisida spektrum luas — preventif"),
+        ],
+        "waktu_tindak": "SEGERA — dalam 24–72 jam setelah gejala terdeteksi",
+    },
+    "blight": {
+        "status": "Berbahaya",
+        "warna": "#e65100",
+        "ringkasan": "Hawar Daun Bakteri disebabkan Xanthomonas oryzae pv. oryzae. Daun mengering dari ujung berwarna kuning-kecoklatan. Berkembang pesat saat curah hujan tinggi dan angin kencang.",
+        "langkah": [
+            ("Tindakan Darurat (0–5 Hari)", "#c62828", [
+                "Semprotkan bakterisida berbahan aktif Streptomisin Sulfat atau Validamycin",
+                "Gunakan Copper Hydroxide (Kocide) dosis 2 g/L sebagai alternatif",
+                "Tambahkan perekat (spreader-sticker) agar bakterisida menempel di daun",
+                "Semprot ulang setelah 5–7 hari, terutama setelah hujan lebat",
+            ]),
+            ("Pengelolaan Air & Lahan", "#e65100", [
+                "Perbaiki sistem drainase — hindari genangan air lebih dari 5 cm",
+                "Buang air dari sawah sementara jika memungkinkan (macak-macak)",
+                "Kurangi pupuk Nitrogen — tingkatkan pupuk Kalium untuk ketahanan batang",
+                "Potong dan bakar bagian daun yang sudah terinfeksi parah",
+            ]),
+            ("Varietas & Pencegahan", "#1565C0", [
+                "Untuk musim tanam berikutnya gunakan varietas tahan: Inpari 13, Inpari 32, Ciherang",
+                "Rendam benih dalam larutan Agrimycin 0,1% selama 24 jam sebelum tanam",
+                "Hindari penanaman serentak dalam satu kawasan luas (perbanyak varietas)",
+                "Laporan ke Dinas Pertanian untuk mendapat bantuan penanganan",
+            ]),
+        ],
+        "produk": [
+            ("Streptomisin Sulfat", "1 g/L air", "Bakterisida — efektif untuk Xanthomonas"),
+            ("Copper Hydroxide (Kocide)", "2 g/L air", "Bakterisida kontak — preventif"),
+            ("Validamycin", "1–2 ml/L air", "Bakterisida sistemik"),
+        ],
+        "waktu_tindak": "SEGERA — dalam 3–5 hari setelah gejala terdeteksi",
+    },
+    "tungro": {
+        "status": "KRITIS",
+        "warna": "#6a1b9a",
+        "ringkasan": "TUNGRO adalah penyakit virus (RTBV & RTSV) yang dibawa wereng hijau (Nephotettix virescens). TIDAK ADA obat untuk Tungro. Tanaman yang terinfeksi TIDAK BISA diselamatkan. Fokus pada pencegahan penyebaran.",
+        "langkah": [
+            ("TINDAKAN WAJIB (0–48 Jam)", "#b71c1c", [
+                "CABUT dan BAKAR semua tanaman yang menunjukkan gejala menguning-kemerahan",
+                "Jangan kompos atau buang di saluran air — virus bisa menyebar",
+                "Tandai batas area infeksi dengan ajir/bambu",
+                "ISOLASI lahan — larang orang masuk membawa alat dari lahan lain",
+            ]),
+            ("Pengendalian Vektor Wereng Hijau", "#c62828", [
+                "Semprot insektisida segera: BPMC (Bassa) 500EC dosis 1,5 ml/L",
+                "Alternasikan dengan Imidakloprid 200SL untuk mencegah resistensi wereng",
+                "Pasang lampu jebak di sekeliling sawah untuk menarik dan membunuh wereng",
+                "Semprot seluruh area — termasuk pematang dan saluran irigasi",
+            ]),
+            ("Koordinasi & Pelaporan", "#1565C0", [
+                "WAJIB lapor ke PPL dan Dinas Pertanian Kabupaten Indramayu dalam 24 jam",
+                "Koordinasi dengan petani sekitar untuk tindakan serempak",
+                "Ajukan klaim asuransi pertanian (AUTP) jika terdaftar — Tungro termasuk risiko dijamin",
+                "Tunda penanaman minimal 2–3 minggu setelah eradikasi",
+            ]),
+            ("Musim Tanam Berikutnya", "#2e7d32", [
+                "Gunakan varietas tahan Tungro: Tukad Unda, Tukad Petanu, Kalimas, atau IR64",
+                "Tanam serempak dalam satu kawasan (± 2 minggu) untuk memutus siklus wereng",
+                "Lakukan pencelupan benih dalam air panas 52°C selama 10 menit sebelum tanam",
+                "Pasang tanaman border (jagung/tebu) sebagai penghalang migrasi wereng",
+            ]),
+        ],
+        "produk": [
+            ("BPMC 500EC (Bassa)", "1,5 ml/L air", "Insektisida — basmi wereng hijau vektor"),
+            ("Imidakloprid 200SL", "0,5 ml/L air", "Insektisida sistemik — efektif untuk wereng"),
+            ("Deltametrin 25EC", "0,5 ml/L air", "Insektisida kontak — rotasi dengan imidakloprid"),
+        ],
+        "waktu_tindak": "DARURAT — tindakan dalam 24–48 jam, tidak bisa ditunda",
+    },
 }
 RISK_COLOR = {
     "Aman":"#3fb950","Rendah":"#58a6ff","Sedang":"#d29922","Tinggi":"#f0883e","Kritis":"#f85149"
@@ -1011,6 +1138,50 @@ elif menu=="Prediksi Risiko":
                         "Tidak ada foto yang diupload. Prediksi berbasis 100% cuaca + survei.\n\n"
                         "Upload foto daun padi di form kiri untuk mengaktifkan prediksi CNN."
                     )
+
+            # ── Saran Penanganan Lengkap ──────────────────────────────
+            st.divider()
+            ph = PENANGANAN[pred_label]
+            ph_warna = ph["warna"]
+            st.markdown(f"""
+            <div style='background:#ffffff;border:1px solid {ph_warna};border-left:5px solid {ph_warna};
+                        border-radius:10px;padding:16px 20px;margin-bottom:12px'>
+              <div style='display:flex;align-items:center;gap:12px;margin-bottom:8px'>
+                <div style='font-size:15px;font-weight:700;color:{ph_warna}'>
+                  Saran Penanganan — {pred_label.capitalize()}
+                </div>
+                <div style='background:{ph_warna};color:#fff;font-size:11px;font-weight:700;
+                            padding:2px 10px;border-radius:12px'>{ph["status"]}</div>
+              </div>
+              <div style='font-size:12px;color:#1a1a2e;line-height:1.7;margin-bottom:8px'>{ph["ringkasan"]}</div>
+              <div style='font-size:11px;font-weight:700;color:{ph_warna};
+                          background:{ph_warna}22;padding:6px 12px;border-radius:6px;display:inline-block'>
+                Waktu Tindak: {ph["waktu_tindak"]}
+              </div>
+            </div>""", unsafe_allow_html=True)
+
+            for step_title, step_color, step_items in ph["langkah"]:
+                with st.expander(step_title, expanded=(step_color=="#c62828" or step_color=="#b71c1c")):
+                    for item in step_items:
+                        st.markdown(f"""
+                        <div style='display:flex;gap:10px;align-items:flex-start;
+                                    padding:6px 0;border-bottom:1px solid #f0f0f0'>
+                          <div style='width:8px;height:8px;border-radius:50%;
+                                      background:{step_color};margin-top:5px;flex-shrink:0'></div>
+                          <div style='font-size:12px;color:#1a1a2e;line-height:1.7'>{item}</div>
+                        </div>""", unsafe_allow_html=True)
+
+            if ph["produk"]:
+                st.markdown("**Produk yang Direkomendasikan**")
+                col_p = st.columns(len(ph["produk"]))
+                for col_pp, (nama_p, dosis_p, fungsi_p) in zip(col_p, ph["produk"]):
+                    with col_pp:
+                        st.markdown(f"""
+                        <div class='dash-card' style='border-top:2px solid {ph_warna};padding:10px 14px;text-align:center'>
+                          <div style='font-size:12px;font-weight:700;color:{ph_warna}'>{nama_p}</div>
+                          <div class='mono' style='margin:4px 0;color:#1565C0'>Dosis: {dosis_p}</div>
+                          <div style='font-size:11px;color:#555555'>{fungsi_p}</div>
+                        </div>""", unsafe_allow_html=True)
 
             # ── Ringkasan Kecamatan ────────────────────────────────────
             if not df_s_all.empty and "kecamatan" in df_s_all.columns:
